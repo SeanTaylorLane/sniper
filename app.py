@@ -73,7 +73,6 @@ class SnipeForm(Form):
 @app.route('/', methods=['GET', 'POST'])
 def home():
     """ Handles the home page rendering."""
-
     soc = Soc()
     subjects = soc.get_subjects()
 
@@ -84,8 +83,8 @@ def home():
     if not request.form:
         # this trick allows us to prepopulate entries using links sent out in emails.
         form = SnipeForm(request.args)
-
-    return render_template('home.html', form=form, subjects=subjects)
+    # change to return home.html when active
+    return render_template('down.html', form=form, subjects=subjects)
 
 @app.route('/faq', methods=['GET'])
 def faq():

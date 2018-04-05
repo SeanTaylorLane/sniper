@@ -29,20 +29,21 @@ def poll(subject, result=False):
     open_data = {}
     if courses is not None:
         for course in courses:
-            course_number = course['courseNumber']
-
-            # remove leading zeroes
-            if course_number.isdigit():
-                course_number = str(int(course_number))
+            course_number = course['number']
 
             open_data[course_number] = []
-            for section in course['sections']:
+            try:
+                sections = soc.get_sections(subject, course_number).json()
+            except JSONDecodeError:
+                sections = []
+
+            for section in sections:
                 section_number = section['number']
                 if section_number.isdigit():
                     section_number = str(int(section_number))
                 # section is open
-                if section['openStatus']:
-                    open_data[course_number].append(Section(section_number, section['index']))
+                if section['openStatus'] == 1:
+                    open_data[course_number].append(Section(section_number, str(section['index']).zfill(5)))
 
         # all of these course numbers are open
         open_courses = [course for course, open_sections in open_data.iteritems() if open_sections]

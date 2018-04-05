@@ -42,7 +42,9 @@ class Soc:
     def get_courses(self, subject):
         """ Gives you a list of courses in a department """
         return self.query('/courses.json', params={'subject': subject})
-
+    
+    def get_sections(self, subject, course):
+        return self.query('/sections.json', params={'subject': subject, 'course': course})
 if __name__ == '__main__':
     soc = Soc(**get_current_tylc())
     #print(soc.get_courses(subject=198))

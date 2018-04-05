@@ -2,14 +2,17 @@
 """ This represents the cronjob that runs to check for course openings"""
 from flaskext.mail import Message
 
-import urllib
+import urllib, requests
 from models import db, Snipe
 from soc import Soc
 from app import mail, app
 import datetime
 from collections import namedtuple
+from json.decoder import JSONDecodeError
+from utils import get_current_tylc
 
-soc = Soc()
+
+soc = Soc(**get_current_tylc())
 
 EMAIL_SENDER = "Course Sniper <sniper@rutgers.io>"
 

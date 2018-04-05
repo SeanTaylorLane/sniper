@@ -14,6 +14,7 @@ import json
 
 import logging
 from logging import Formatter, FileHandler
+from utils import get_current_tylc
 
 # Set up the Flask application
 app = Flask(__name__)
@@ -73,7 +74,7 @@ class SnipeForm(Form):
 @app.route('/', methods=['GET', 'POST'])
 def home():
     """ Handles the home page rendering."""
-    soc = Soc()
+    soc = Soc(**get_current_tylc())
     subjects = soc.get_subjects()
 
     form = SnipeForm(request.form)
@@ -110,7 +111,7 @@ def ajaxtest():
 def test():
     from cron import poll
 
-    soc = Soc()
+    soc = Soc(**get_current_tylc())
     math_courses = soc.get_courses(640)
     open_courses = poll(640, result = True)
     for dept, sections in open_courses.iteritems():

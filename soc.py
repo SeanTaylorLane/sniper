@@ -3,16 +3,18 @@
 
 # Requests is so awesome
 import requests
+from utils import get_current_tylc
 
 class Soc:
     """ Communicates with Rutgers SOC """
-    def __init__(self, campus='NB', semester='12018', level='U,G'):
+    def __init__(self, term, year, level, campus):
         """ We always use certain parameters"""
-        self.base_url = 'http://sis.rutgers.edu/oldsoc'
+        self.base_url = 'https://nstanlee.rutgers.edu/4'
         self.params = {
-            'campus': campus,
-            'semester': semester,
+            'term': term,
+            'year': semester,
             'level': level,
+            'campus': campus
         }
 
         # Spoof the user agent for good measure
@@ -42,7 +44,6 @@ class Soc:
         return self.query('/courses.json', params={'subject': subject})
 
 if __name__ == '__main__':
-    soc = Soc()
-    #print soc.get_courses(subject=198)
-    asdf = soc.get_subjects()
+    soc = Soc(**get_current_tylc())
+    #print(soc.get_courses(subject=198))
     import pdb; pdb.set_trace()

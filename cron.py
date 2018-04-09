@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """ This represents the cronjob that runs to check for course openings"""
-from flaskext.mail import Message
+from flask_mail import Message
 
 import urllib, requests
 from models import db, Snipe
@@ -8,9 +8,8 @@ from soc import Soc
 from app import mail, app
 import datetime
 from collections import namedtuple
-from json.decoder import JSONDecodeError
 from utils import get_current_tylc
-
+#import json
 
 soc = Soc(**get_current_tylc())
 
@@ -33,8 +32,8 @@ def poll(subject, result=False):
 
             open_data[course_number] = []
             try:
-                sections = soc.get_sections(subject, course_number).json()
-            except JSONDecodeError:
+                sections = soc.get_sections(subject, course_number)
+            except ValueError: #json.decoder.JSONDecodeError:
                 sections = []
 
             for section in sections:
@@ -43,10 +42,10 @@ def poll(subject, result=False):
                     section_number = str(int(section_number))
                 # section is open
                 if section['openStatus'] == 1:
-                    open_data[course_number].append(Section(section_number, str(section['index']).zfill(5)))
+                    open_data[course_number].append(Section(section_number, str(section['sectionIndex']).zfill(5)))
 
         # all of these course numbers are open
-        open_courses = [course for course, open_sections in open_data.iteritems() if open_sections]
+        open_courses = [course for course, open_sections in open_data.items() if open_sections]
 
         if result:
             return open_data

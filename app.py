@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 from wtforms import Form, TextField, validators
 from wtforms.validators import StopValidation
 from models import Snipe, db, User
-from flaskext.mail import Mail
+from flask_mail import Mail
 from secrets import mail_username, mail_password
 from soc import Soc
 from werkzeug.contrib.fixers import ProxyFix
@@ -99,8 +99,7 @@ def ajaxtest():
 
     if not result['success']:
         from cron import EMAIL_SENDER
-        from flaskext.mail import Message
-
+        from flask_mail import Message
         message = Message('Sniper tests are failing', sender=EMAIL_SENDER)
         message.body = 'FIX IT'
         message.add_recipient('vaibhav2614@gmail.com')
@@ -110,25 +109,22 @@ def ajaxtest():
 
 def test():
     from cron import poll
-
     soc = Soc(**get_current_tylc())
     math_courses = soc.get_courses(640)
     open_courses = poll(640, result = True)
-    for dept, sections in open_courses.iteritems():
+    for dept, sections in open_courses.items():
         open_courses[dept] = [section.number for section in sections]
 
     success = True
 
     for math_course in math_courses:
-        course_number = math_course['courseNumber']
+        course_number = math_course['number']
 
-        if course_number.isdigit():
-            course_number = str(int(course_number))
+        course_number = str(int(course_number))
 
         for section in math_course['sections']:
             section_number = section['number']
-            if section_number.isdigit():
-                section_number = str(int(section_number))
+            section_number = str(int(section_number))
 
             if section['openStatus'] and not section_number in open_courses[course_number]:
                 raise Exception('Test failed')

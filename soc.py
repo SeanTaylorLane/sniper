@@ -12,7 +12,7 @@ class Soc:
         self.base_url = 'https://nstanlee.rutgers.edu/4'
         self.params = {
             'term': term,
-            'year': semester,
+            'year': year,
             'level': level,
             'campus': campus
         }
@@ -31,7 +31,7 @@ class Soc:
         r = requests.get(self.base_url + resource, params=params, headers=self.headers)
 
         if r.status_code == requests.codes.ok:
-            return r.json
+            return r.json()
 
         raise Exception('You made an invalid request %s: %s' % (r.status_code, r.text))
 
@@ -43,6 +43,9 @@ class Soc:
         """ Gives you a list of courses in a department """
         return self.query('/courses.json', params={'subject': subject})
     
+    def get_classes(self, subject):
+        return self.get_courses(subject)
+        
     def get_sections(self, subject, course):
         return self.query('/sections.json', params={'subject': subject, 'course': course})
 if __name__ == '__main__':

@@ -32,7 +32,11 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = mail_username
 app.config['MAIL_PASSWORD'] = mail_password
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////ilab/users/ayw19/workspace/sniper/production.db'
 
+
+db.init_app(app)
 mail = Mail(app)
 
 class SnipeForm(Form):
@@ -85,7 +89,7 @@ def home():
         # this trick allows us to prepopulate entries using links sent out in emails.
         form = SnipeForm(request.args)
     # change to return home.html when active
-    return render_template('down.html', form=form, subjects=subjects)
+    return render_template('home.html', form=form, subjects=subjects)
 
 @app.route('/faq', methods=['GET'])
 def faq():

@@ -3,7 +3,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask import Flask
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/production.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////ilab/users/ayw19/workspace/sniper/production.db'
 db = SQLAlchemy(app)
 
 class Snipe(db.Model):

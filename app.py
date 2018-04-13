@@ -119,13 +119,8 @@ def test():
 
     for math_course in math_courses:
         course_number = math_course['number']
-
-        course_number = str(int(course_number))
-
-        for section in math_course['sections']:
+        for section in soc.get_sections(640, course_number):
             section_number = section['number']
-            section_number = str(int(section_number))
-
             if section['openStatus'] and not section_number in open_courses[course_number]:
                 raise Exception('Test failed')
                 success = False

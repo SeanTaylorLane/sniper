@@ -1,5 +1,6 @@
 *.pyc
 *.log
+*.db
 secrets.py
 ENV
 venv

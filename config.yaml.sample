@@ -1,0 +1,9 @@
+term: 9
+year: 2017
+level: u
+mail:
+    MAIL_SERVER: <smtp mail server address>
+    MAIL_PORT: <mail port>
+    MAIL_USE_TLS: true
+    MAIL_USERNAME: <mail server username>
+    MAIL_PASSWORD: <mail server password>

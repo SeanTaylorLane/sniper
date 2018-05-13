@@ -1,0 +1,13 @@
+class_format: <school>:<subject>:<course>:<section>
+get:
+    school:
+        state: IGNORE
+    subject:
+        url: https://nstanlee.rutgers.edu/4/subjects.json
+        params:
+            term: 9
+            year: 2018
+            level: u,g
+            campus: $campuses$
+    course: None
+    section: None

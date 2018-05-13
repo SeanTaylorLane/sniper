@@ -4,3 +4,4 @@
 secrets.py
 ENV
 venv
+config.yaml

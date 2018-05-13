@@ -1,105 +1,50 @@
-#!/usr/bin/env python
-""" This represents the cronjob that runs to check for course openings"""
-from flask_mail import Message
+import requests as req
+import yaml
+import sqlite3 as sqlite
 
-import urllib, requests
-from models import db, Snipe
-from soc import Soc
-from app import mail, app
-import datetime
-from collections import namedtuple
-from utils import get_current_tylc
-#import json
+import sniper
+import notifier
 
-soc = Soc(**get_current_tylc())
+conn = sqlite.connect("sniper.db")
 
-EMAIL_SENDER = "Course Sniper <sniper@rutgers.io>"
+with open('config.yaml') as f:
+    config = yaml.load(f)
 
-Section = namedtuple('Section', ['number', 'index'])
+params = {
+    'term': config['term'],
+    'year': config['year'],
+    'level': config['level']
+}
 
-def poll(subject, result=False):
-    """ Poll a subject for open courses. """
-    app.logger.warning("Polling for %s" % (subject))
+def get_open_sections(subject, course, campus):
+    scc_params = {
+        'subject': subject,
+        'course': course,
+        'campus': campus
+    }
+    r = req.get('https://nstanlee.rutgers.edu/4/sections.json', params={**params, **scc_params})
+    return [(section['number'], section['sectionIndex'], section['openStatus'], section['title']) for section in r.json() if section['openStatus'] == 1]
 
-    # get all the course data from SOC
-    courses = soc.get_courses(subject)
-
-    # build information about which courses/sections are currently open.
-    open_data = {}
-    if courses is not None:
-        for course in courses:
-            course_number = course['number']
-
-            open_data[course_number] = []
-            try:
-                sections = soc.get_sections(subject, course_number)
-            except ValueError: #json.decoder.JSONDecodeError:
-                sections = []
-
+def snipe():
+    targets = sniper.get_snipe_targets()
+    sections = {}
+    for t in targets:
+        try:
+            sections[(t[0], t[1], t[3])].append(t[2])
+        except KeyError:
+            sections[(t[0], t[1], t[3])] = [t[2]]
+    open_sections = {ssc: get_open_sections(*ssc) if len(section_list) > 0 else [] for ssc, section_list in sections.items()}
+    # print("OS", open_sections)
+    c = conn.cursor()
+    for ssc, sections in open_sections.items():
+        if len(sections) > 0:
             for section in sections:
-                section_number = section['number']
-                if section_number.isdigit():
-                    section_number = str(int(section_number))
-                # section is open
-                if section['openStatus'] == 1:
-                    open_data[course_number].append(Section(section_number, str(section['sectionIndex']).zfill(5)))
-
-        # all of these course numbers are open
-        open_courses = [course for course, open_sections in open_data.items() if open_sections]
-
-        if result:
-            return open_data
-
-        if open_courses:
-            # Notify people that were looking for these courses
-            snipes = Snipe.query.filter(Snipe.course_number.in_(open_courses), Snipe.subject==str(subject))
-            for snipe in snipes:
-                for section in open_data[snipe.course_number]:
-                    if section.number == snipe.section:
-                        notify(snipe, section.index)
-        else:
-            app.logger.warning('Subject "%s" has no open courses' % (subject))
-    else:
-        app.logger.warning('Subject "%s" is not valid' % (subject))
-
-def notify(snipe, index):
-    """ Notify this snipe that their course is open"""
-    course = '%s:%s:%s' % (snipe.subject, snipe.course_number, snipe.section)
-
-    if snipe.user.email:
-
-        attributes = {
-            'email': snipe.user.email,
-            'subject': snipe.subject,
-            'course_number': snipe.course_number,
-            'section': snipe.section,
-        }
-
-        # build the url for prepopulated form
-        url = 'http://sniper.rutgers.io/?%s' % (urllib.urlencode(attributes))
-
-        register_url = 'https://sims.rutgers.edu/webreg/editSchedule.htm?login=cas&semesterSelection=12018&indexList=%s' % (index)
-
-        email_text = 'A course (%s) that you were watching looks open. Its index number is %s. Click the link below to register for it!\n\n %s \n\n If you don\'t get in, visit this URL: \n\n %s \n\n to continue watching it.\n\n Send any feedback to sniper@rutgers.io' % (course, index, register_url, url)
-
-        # send out the email
-        message = Message('[Course Sniper](%s) is open' %(course), sender=EMAIL_SENDER)
-        message.body = email_text
-        message.add_recipient(snipe.user.email)
-        message.add_recipient(snipe.user.email)
-
-        mail.send(message)
-
-    db.session.delete(snipe)
-    db.session.commit()
-
-    app.logger.warning('Notified user: %s about snipe %s' % (snipe.user, snipe))
-
-
-
-if __name__ == '__main__':
-    # get all the courses that should be queried.
-    app.logger.warning("----------- Running the Cron %s " % (str(datetime.datetime.now())))
-    subjects = db.session.query(Snipe.subject).distinct().all()
-    for subject in subjects:
-        poll(subject[0])
+                # print(section)
+                query = '''
+                select u.email from users u join snipes s using (userid)
+                where s.subject=%d and s.course=%d and s.section=%d or s.section=-100 and s.campus="%s"''' % (ssc[0], ssc[1], int(section[0]), ssc[2])
+                print(query)
+                # print(ssc, section)
+                c.execute(query)
+                # print(c.fetchall())
+                notifier.notify(set([u[0] for u in c.fetchall()]), ssc[1], ssc[0], section[0], str(section[1]).zfill(5), section[3])

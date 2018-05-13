@@ -41,10 +41,10 @@ def snipe():
             for section in sections:
                 # print(section)
                 query = '''
-                select u.email from users u join snipes s using (userid)
+                select u.userid, u.email from users u join snipes s using (userid)
                 where s.subject=%d and s.course=%d and s.section=%d or s.section=-100 and s.campus="%s"''' % (ssc[0], ssc[1], int(section[0]), ssc[2])
                 print(query)
                 # print(ssc, section)
                 c.execute(query)
                 # print(c.fetchall())
-                notifier.notify(set([u[0] for u in c.fetchall()]), ssc[1], ssc[0], section[0], str(section[1]).zfill(5), section[3])
+                notifier.notify(set(c.fetchall()), ssc[0], ssc[1], section[0], str(section[1]).zfill(5), section[3])

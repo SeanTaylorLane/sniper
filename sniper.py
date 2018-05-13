@@ -23,6 +23,7 @@ def create_tables():
         email text not null unique
     )
     ''')
+    conn.commit()
 
 def init_sniper():
     create_tables()
@@ -49,5 +50,4 @@ def get_snipe_targets():
     c.execute(query)
     return c.fetchall()
 
-insert_snipes("r.zhang194@gmail.com", 198, 111, [45], "NB")
-
+init_sniper()

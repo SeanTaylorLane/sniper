@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+body{
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: .013em;
+}
+
+a{
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+.btn{
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+.btn:hover{
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+.btn-danger{
+  font-size:1.15em;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.page-header h1{
+  font-size: 4em;
+  font-weight: 700;
+}
+.page-header h1 a{
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inLine{
+  display: -moz-inline-stack;
+   display: inline-block;
+   zoom: 1;
+   *display: inline;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+span.red {
+    color: #cc0033;
+}
+
+footer {
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px 5px;
+}
+
+label{
+    padding: 5px 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+dl .alert{
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+#sniper-test {
+    margin: 10px;
+}
+
+ol li b {
+    display: block;
+}
+
+
+@media(max-width:767px){
+  input[type="text"] {
+      width: 100%;
+  }
+  .page-header h1{
+    font-size: 2em;
+  }
+  .content{
+    padding-top: 0px;
+    width:100%;
+  }
+  footer{
+    font-size:14px;
+  }
+  #github{
+    width:100px;
+  }
+  /*Change font size and position on mobile b/c it gets cut off*/
+  ::-webkit-input-placeholder { font-size: 14px; padding-top:3px; }
+  ::-moz-placeholder { font-size: 14px; padding-top:3px; }
+  :-ms-input-placeholder { font-size: 14px; padding-top:3px; }
+  input:-moz-placeholder { font-size: 14px; padding-top:3px; }
+}

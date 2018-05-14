@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block title %} Success | {% endblock %}
+{% block content %}
+    <div class="text-center alert alert-success">
+        Got it! I'll notify you at {{ form.email.data | safe }} when your class opens up.
+    </div>
+    {% include '_faq.html' %}
+{% endblock %}

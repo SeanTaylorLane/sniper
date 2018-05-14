@@ -22,7 +22,7 @@ def get_open_sections(subject, course, campus):
         'course': course,
         'campus': campus
     }
-    r = req.get('https://nstanlee.rutgers.edu/4/sections.json', params={**params, **scc_params})
+    r = req.get('%s%s' % (config.base_url, 'sections.json'), params={**params, **scc_params})
     return [(section['number'], section['sectionIndex'], section['openStatus'], section['title']) for section in r.json() if section['openStatus'] == 1]
 
 def snipe():

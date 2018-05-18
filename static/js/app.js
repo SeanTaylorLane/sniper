@@ -30,7 +30,7 @@ $(function() {
             return results;
         }
     });
-
+   
     $('#sniper-test').button().click(function() {
         var that = $(this);
         that.button('loading');

@@ -9,7 +9,7 @@
         <p class="text-center animated fadeIn"> Enter your details below, and I'll notify you when your class opens up. Sniper is currently watching courses for Spring 2018 on the Rutgers New Brunswick campus. </p>
       </div>
       <div class="col-md-4 col-md-offset-4">
-        <form method=post action="/">
+        <form method=post action="/" id='snipe-form'>
             <dl class="animated fadeIn">
                 {{ render_field(form.email, placeholder="you@example.com") }}
                 {{ render_field(form.subject, placeholder="Department Number. Ex: '640' for Math", autocomplete="off") }}

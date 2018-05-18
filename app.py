@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, make_response
 import yaml
-from cron import snipe
 import soc
+from sniper import insert_snipes
 from notifier import init_notifier
+import security
 from wtforms import Form, TextField, SelectField, validators
 from wtforms.validators import StopValidation
 from werkzeug.contrib.fixers import ProxyFix
@@ -15,8 +16,7 @@ with open('config.yaml') as f:
     config = yaml.load(f)
 
 app = Flask(__name__)
-app.config = {**app.config, **config['mail']}
-
+app.config = {**app.config, **config['mail']} 
 logfile = logging.FileHandler("sniper.log")
 logfile.setLevel(logging.INFO)
 logfile.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s [in $(mathname)s:$(lineno)d]"))
@@ -34,11 +34,10 @@ def parse_section(section):
 
 class SnipeForm(Form):
     email = TextField("Email", [validators.Email(), validators.Required()])
-    subject = SelectField("Subject", choices=[(subject['code'], '%s (%d)' % (subject['description'], subject['code'])) for subject in soc.get_subjects()])
-    course = TextField("Course", [validators.Length(min=2, max=4), validators.NumberRange()])
+    subject = TextField("Subject")
+    course = TextField("Course", [validators.Length(min=1, max=5), validators.NumberRange()])
     section = TextField("Section")
-    campus = TextField("Campus")
-
+    
     def validate_subject(form, field):
         if not form.subject.data.isdigit():
             m = re.search('(\d+)', form.subject.data)
@@ -60,6 +59,7 @@ class SnipeForm(Form):
         print("SECTIONS", sections)
         if len(sections) == 0:
                 form.section.data = [-100]
+                return True
         parsed_sections = []
         for section in sections:
             parsed = parse_section(section)
@@ -72,25 +72,30 @@ class SnipeForm(Form):
         form.section.data = parsed_sections
         print("SECTION OKAY")
         return True
-
+    
     def save(self):
-        pass
+        insert_snipes(self.email.data, self.subject.data, self.course.data, self.section.data, "NB")
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     form = SnipeForm(request.form)
-    if request.method == 'POST':
-        print(form.validate())
     if request.method == 'POST' and form.validate():
-        print("SUCCESS")
-        form.save()
-        return render_template('success.html', form=form)
+        try:
+            token = request.cookies['auth_token']
+            print("T", token)
+            if security.verify_remove_token(token):
+                form.save()
+                return render_template('success.html', form=form)
+        except KeyError:
+            pass
     form = SnipeForm(request.args)
-    return render_template('home.html', form=form, subjects=soc.get_subjects())
+    resp = make_response(render_template('home.html', form=form, subjects=soc.get_subjects()))
+    resp.set_cookie("auth_token", security.get_new_token())
+    return resp
 
 @app.route('/snipe', methods=['POST'])
 def snipe():
-    pass
+    print(request.args)
 
 @app.route('/faq', methods=['GET'])
 def faq():

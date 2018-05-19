@@ -2,6 +2,7 @@
 {% block content %}
     <script type="text/javascript">
         var subjects = {{ subjects|tojson|safe }};
+        var campuses = {{ campuses|tojson|safe }};
     </script>
     {% from "_formhelpers.html" import render_field %}
     <div class="row">
@@ -15,6 +16,7 @@
                 {{ render_field(form.subject, placeholder="Department Number. Ex: '640' for Math", autocomplete="off") }}
                 {{ render_field(form.course, placeholder="Ex: '151' for Calculus I") }}
                 {{ render_field(form.section, placeholder="Ex: '1', '1-15', or leave empty to snipe all sections") }}
+                {{ render_field(form.campus, placeholder="NB for New Brunswick, NK for Newark, CM for Camden. Append ONLINE_ before each for online offerings.") }}
             </dl>
             <div class="text-center"><button class="btn btn-danger animated fadeIn" type="submit">Snipe</button></div>
         </form>

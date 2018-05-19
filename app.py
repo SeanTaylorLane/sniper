@@ -1,16 +1,17 @@
 from flask import Flask, request, render_template, make_response
-import yaml
-import soc
-from sniper import insert_snipes
-from notifier import init_notifier
-import security
+
+import yaml, json
+
 from wtforms import Form, TextField, SelectField, validators
 from wtforms.validators import StopValidation
 from werkzeug.contrib.fixers import ProxyFix
-import re
-import json
 
+import re
 import logging
+
+import soc, security
+from sniper import insert_snipes
+from notifier import init_notifier
 
 with open('config.yaml') as f:
     config = yaml.load(f)
@@ -37,6 +38,7 @@ class SnipeForm(Form):
     subject = TextField("Subject")
     course = TextField("Course", [validators.Length(min=1, max=5), validators.NumberRange()])
     section = TextField("Section")
+    campus = TextField("Campus")
     
     def validate_subject(form, field):
         if not form.subject.data.isdigit():
@@ -72,9 +74,14 @@ class SnipeForm(Form):
         form.section.data = parsed_sections
         print("SECTION OKAY")
         return True
+
+    def validate_campus(form, field):
+        if form.section.data not in soc.get_campuses():
+            form.section.data = "NB"
+        return True
     
     def save(self):
-        insert_snipes(self.email.data, self.subject.data, self.course.data, self.section.data, "NB")
+        insert_snipes(self.email.data, self.subject.data, self.course.data, self.section.data, self.campus.data)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -89,17 +96,26 @@ def home():
         except KeyError:
             pass
     form = SnipeForm(request.args)
-    resp = make_response(render_template('home.html', form=form, subjects=soc.get_subjects()))
+    resp = make_response(render_template('home.html', form=form, subjects=soc.get_subjects(), campuses=soc.get_campuses()))
     resp.set_cookie("auth_token", security.get_new_token())
     return resp
 
-@app.route('/snipe', methods=['POST'])
+@app.route('/snipe', methods=['GET'])
 def snipe():
-    print(request.args)
+    form = SnipeForm(request.form)
+    email = request.args['email']
+    subject = request.args['subject']
+    course = request.args['course']
+    section = request.args['section_number']
+    token = request.args['t']
+    if security.verify_token(token):
+        insert_snipes(email, subject, course, section, "NB")
+        return render_template("success.html", form=form)
+    return "400: Invalid Token", 400
 
 @app.route('/faq', methods=['GET'])
 def faq():
-    pass
+    return render_template('faq.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

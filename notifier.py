@@ -9,7 +9,7 @@ with open('config.yaml') as f:
     config = yaml.load(f)
 
 mail = Mail()
-EMAIL_SENDER = "Course Sniper <sniper@rutgers.io>"
+EMAIL_SENDER = "Course Sniper <%s>" % config['site_url']
 REGISTER_URL = "https://sims.rutgers.edu/webreg/editSchedule.htm?login=cas&semesterSelection=%s&indexList=%%s" % ("%d%d" % (config['term'], config['year']))
 register_params = {
 }
@@ -30,9 +30,9 @@ def notify(uid, email, subject, course, section_number, index, section_title):
         "email": email,
         "t": get_new_token()
     }
-    resnipe_url = "https://sniper.rutgers.io/snipe?%s" % urlencode(params)
+    resnipe_url = "%s://%s/snipe?%s" % (config['site_protocol'], config['site_url'], urlencode(params))
     params['section_number'] = 'all'
-    resnipe_all = 'https://sniper.rutgers.io/snipe?%s' % urlencode(params)
+    resnipe_all = "%s://%s/snipe?%s" % (config['site_protocol'], config['site_url'], urlencode(params))
     email_text = ("Section No. %s of %s(%s:%s) that you were watching looks open. Its index number is %s. " + \
                  "Click the link below to register for it!\n\n%s \n\nIf you don't get in, " + \
                  "please visit this URL:\n\n%s\n\nto continue watching it.\n\n" + \

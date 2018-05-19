@@ -11,6 +11,7 @@ params = {
 }
 
 subjects = None
+campuses = None
 def get_subjects():
     global subjects
     if not subjects:
@@ -19,3 +20,10 @@ def get_subjects():
         subjects = [{'code': subject['subject'], 'description': subject['subjectDescription']} for subject in r.json()]
     return subjects
 
+def get_campuses():
+    global campuses
+    if not campuses:
+        print("Populating campuses")
+        r = req.get("%s%s" % (config['base_url'], 'init.json'), params=params)
+        campuses = r.json()['campuses']
+    return campuses

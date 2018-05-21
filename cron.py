@@ -49,3 +49,5 @@ def snipe():
                     c.execute(query)
                     # print(c.fetchall())
                     notifier.notify_all(set(c.fetchall()), ssc[0], ssc[1], section[0], str(section[1]).zfill(5), section[3])
+
+snipe()

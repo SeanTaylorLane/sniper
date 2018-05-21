@@ -22,6 +22,20 @@ def create_tables():
             email text not null unique
         )
         ''')
+
+        c.execute('''
+        create table if not exists subjects(
+            code integer primary key,
+            description text not null
+        )
+        ''')
+
+        c.execute('''
+        create table if not exists campuses(
+            campus text primary key
+        )
+        ''')
+
         conn.commit()
 
 def init_sniper():

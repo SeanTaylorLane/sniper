@@ -10,6 +10,12 @@ RUN chmod 0644 /etc/cron.d/soc-cron
 
 RUN touch /var/log/cron.log
 
+RUN apk update
+
+RUN apk upgrade
+
+RUN apk add bash
+
 RUN apk add --no-cache python3 && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
@@ -22,10 +28,10 @@ RUN apk add --no-cache sqlite
 
 RUN pip install --trusted-host pypi.python.org -r pip.req
 
-EXPOSE 80
+EXPOSE 3000:3000
 
 ENV NAME World
 
-CMD ["python", "app.py"]
+CMD crond && tail -f /var/log/cron.log
 
-CMD cron && tail -f /var/log/cron.log
+CMD python app.py

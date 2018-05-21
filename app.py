@@ -13,6 +13,7 @@ import soc, security
 from sniper import insert_snipes
 from notifier import init_notifier
 
+print("Starting server...")
 with open('config.yaml') as f:
     config = yaml.load(f)
 
@@ -118,4 +119,4 @@ def faq():
     return render_template('faq.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=3000)

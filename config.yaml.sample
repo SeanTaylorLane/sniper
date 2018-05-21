@@ -1,9 +1,12 @@
 term: 9
 year: 2017
 level: u
+base_url: https://nstanlee.rutgers.edu/4/
+site_url: localhost:5000
+site_protocol: http
 mail:
-    MAIL_SERVER: <smtp mail server address>
-    MAIL_PORT: <mail port>
-    MAIL_USE_TLS: true
-    MAIL_USERNAME: <mail server username>
-    MAIL_PASSWORD: <mail server password>
+    MAIL_SERVER: <>
+    MAIL_PORT: <>
+    MAIL_USE_TLS: <>
+    MAIL_USERNAME: <>
+    MAIL_PASSWORD: <>

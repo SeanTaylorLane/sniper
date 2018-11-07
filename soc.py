@@ -7,15 +7,14 @@ from utils import get_current_tylc
 
 class Soc:
     """ Communicates with Rutgers SOC """
-    def __init__(self, term, year, level, campus):
+    def __init__(self, term, year, campus):
         """ We always use certain parameters"""
-        self.base_url = 'https://nstanlee.rutgers.edu/4'
-        self.params = {
-            'term': term,
-            'year': year,
-            'level': level,
-            'campus': campus
-        }
+        self.base_url = 'http://sis.rutgers.edu/soc/api/'
+        self.params = (
+            ('year', str(year)),
+            ('term', str(term)),
+            ('campus', str(campus)),
+        )
 
         # Spoof the user agent for good measure
         self.headers = {
@@ -23,7 +22,7 @@ class Soc:
         }
 
 
-    def query(self, resource, params):
+    def query(self, resource, params={}):
         """Queries the given resource (a string) with the given parameters.
         For example self.query('/api/subjects.json', { 'keyword': 'Computer Science' })"""
         params.update(self.params)
@@ -35,19 +34,12 @@ class Soc:
 
         raise Exception('You made an invalid request %s: %s' % (r.status_code, r.text))
 
-    def get_subjects(self, **kwargs):
-        """ Gives you a list of subjects (departments) """
-        return self.query('/subjects.json', params=kwargs)
-
-    def get_courses(self, subject):
+    def get_courses(self):
         """ Gives you a list of courses in a department """
-        return self.query('/courses.json', params={'subject': subject})
-    
-    def get_classes(self, subject):
-        return self.get_courses(subject)
-        
-    def get_sections(self, subject, course):
-        return self.query('/sections.json', params={'subject': subject, 'course': course})
+        return self.query('/courses.gzip')
+      
+    def get_sections(self):
+        return self.query('/openSections.gzip')
 if __name__ == '__main__':
     soc = Soc(**get_current_tylc())
     #print(soc.get_courses(subject=198))

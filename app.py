@@ -15,9 +15,12 @@ import json
 import logging
 from logging import Formatter, FileHandler
 from utils import get_current_tylc
+import os
 
 # Set up the Flask application
 app = Flask(__name__)
+
+file_path = os.path.abspath(os.getcwd())+"\database.db"
 
 # Set up a file for logging
 file_handler = FileHandler('everything.log')
@@ -33,7 +36,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = mail_username
 app.config['MAIL_PASSWORD'] = mail_password
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////ilab/users/ayw19/workspace/sniper/production.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
 
 
 db.init_app(app)
@@ -42,34 +45,21 @@ mail = Mail(app)
 class SnipeForm(Form):
     """ Represents the Snipe form on the homepage. """
     email = TextField('Email', [validators.Email(), validators.Required()])
-    subject = TextField('Subject')
-    course_number = TextField('Course Number', [validators.Length(min=2, max=4), validators.NumberRange()])
-    section = TextField('Section', [validators.Length(min=1, max=4)])
-
-    def validate_subject(form, field):
-        if not form.subject.data.isdigit():
-            m = re.search('(\d+)', form.subject.data)
-            if m:
-                form.subject.data = m.group(1)
-            else:
-                raise StopValidation('Please enter a valid subject')
-        return True
-
-    def validate_course_number(form, field):
-        # course numbers sometime have leading zeroes
-        if form.course_number.data.isdigit():
-            form.course_number.data = str(int(form.course_number.data))
-        return True
+    section = TextField('section')
 
     def validate_section(form, field):
-        if form.section.data.isdigit():
-            form.section.data = str(int(form.section.data))
+        if not form.section.data.isdigit():
+            m = re.search('(\d+)', form.section.data)
+            if m:
+                form.section.data = m.group(1)
+            else:
+                raise StopValidation('Please enter a valid section')
         return True
 
     def save(self):
         """ Saves to SQLAlchemy User and Snipe models """
 
-        snipe = Snipe.create(self.email.data, self.subject.data, self.course_number.data, self.section.data)
+        snipe = Snipe.create(self.email.data, self.section.data)
 
         db.session.add(snipe)
         db.session.commit()
@@ -79,7 +69,6 @@ class SnipeForm(Form):
 def home():
     """ Handles the home page rendering."""
     soc = Soc(**get_current_tylc())
-    subjects = soc.get_subjects()
 
     form = SnipeForm(request.form)
     if request.method == 'POST' and form.validate():
@@ -89,7 +78,7 @@ def home():
         # this trick allows us to prepopulate entries using links sent out in emails.
         form = SnipeForm(request.args)
     # change to return home.html when active
-    return render_template('home.html', form=form, subjects=subjects)
+    return render_template('home.html', form=form)
 
 @app.route('/faq', methods=['GET'])
 def faq():
@@ -100,36 +89,12 @@ def ajaxtest():
     result = {
         'success': test(),
     }
-
-    if not result['success']:
-        from cron import EMAIL_SENDER
-        from flask_mail import Message
-        message = Message('Sniper tests are failing', sender=EMAIL_SENDER)
-        message.body = 'FIX IT'
-        message.add_recipient('vaibhav2614@gmail.com')
-        mail.send(message)
-
     return json.dumps(result)
 
 def test():
     from cron import poll
     soc = Soc(**get_current_tylc())
-    math_courses = soc.get_courses(640)
-    open_courses = poll(640, result = True)
-    for dept, sections in open_courses.items():
-        open_courses[dept] = [section.number for section in sections]
-
-    success = True
-
-    for math_course in math_courses:
-        course_number = math_course['number']
-        for section in soc.get_sections(640, course_number):
-            section_number = section['number']
-            if section['openStatus'] and not section_number in open_courses[course_number]:
-                raise Exception('Test failed')
-                success = False
-
-    return success
+    return True
 
 if __name__ == '__main__':
     test()

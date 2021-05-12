@@ -1,2 +1,2 @@
-mail_username=""
-mail_password=""
+dogedogedogedoge
+dogedogedogedoge

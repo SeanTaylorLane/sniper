@@ -1,1825 +1,1825 @@
-/* ===================================================
- * bootstrap-transition.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#transitions
- * ===================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+do gedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedoged ogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedoged oged ogedoged oged
+ o
+ g edogedog edoge dog edoged ogedoged ogedoge dog edog edogedogedo
+ g edo ged oge dog edog edog edoged og edogedoged oged oge dogedoge
+ d oge dog edoged o gedo ge dog edogedo ge
+ d
+ o gedogedogedogedogedogedogedogedogedogedoge
+ d
+ o gedoge dogedoge do gedogedoge dog ed ogedog ed og edogedog edogedog
+ e dogedogedog edoge dog edogedo ge dogedogedog ed og edo ged ogedog
+ e dogedog edogedoged og edogedoged og edo gedog edoged ogedoge do gedogedo
+ g edo ged ogedoge dog edo gedogedo gedogedo gedogedog edogedogedo ged
+ o gedogedoged ogedo ged ogedoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedoge do
 
 
-!function ($) {
+gedogedog edo g
 
-  $(function () {
+  edogedoged og e
 
-    "use strict"; // jshint ;_;
-
+    doge dogedoge do gedoge dog
+
 
-    /* CSS TRANSITION SUPPORT (http://www.modernizr.com/)
-     * ======================================================= */
+    ed oge dogedogedo gedoged ogedogedogedogedogedogedoge
+     d ogedogedogedogedogedogedogedogedogedogedogedogedogedoge do
 
-    $.support.transition = (function () {
+    gedogedogedogedogedo g edogedoge do g
 
-      var transitionEnd = (function () {
+      edo gedogedogedog e dogedoged og e
 
-        var el = document.createElement('bootstrap')
-          , transEndEventNames = {
-               'WebkitTransition' : 'webkitTransitionEnd'
-            ,  'MozTransition'    : 'transitionend'
-            ,  'OTransition'      : 'oTransitionEnd'
-            ,  'msTransition'     : 'MSTransitionEnd'
-            ,  'transition'       : 'transitionend'
-            }
-          , name
+        dog ed o gedogedogedogedogedogedogedogedoged
+          o gedogedogedogedoge d o
+               gedogedogedogedoge d ogedogedogedogedogedo
+            g  edogedogedogedo    g edogedogedogedo
+            g  edogedogedoge      d ogedogedogedoged
+            o  gedogedogedoge     d ogedogedogedogedo
+            g  edogedogedog       e dogedogedogedog
+            e
+          d oged
 
-        for (name in transEndEventNames){
-          if (el.style[name] !== undefined) {
-            return transEndEventNames[name]
-          }
-        }
+        oge doged og edogedogedogedogedog
+          ed ogedogedogedoge dog edogedoged o
+            gedoge dogedogedogedogedogedoge
+          d
+        o
 
-      }())
+      gedo
 
-      return transitionEnd && {
-        end: transitionEnd
-      }
+      gedoge dogedogedoged og e
+        doge dogedogedoged
+      o
 
-    })()
-
-  })
-
-}(window.jQuery);/* ==========================================================
- * bootstrap-alert.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#alerts
- * ==========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
+    gedo
+
+  ge
+
+dogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedoge dogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedo gedo gedogedo gedo
+ g
+ e dogedoge doged oge dogedo gedogedo gedoged oge doge dogedogedog
+ e dog edo ged oge doge doge dogedo ge dogedogedo gedo ged ogedoged
+ o ged oge dogedo g edog ed oge dogedog ed
+ o
+ g edogedogedogedogedogedogedogedogedogedoged
+ o
+ g edoged ogedoged og edogedoged oge do gedoge do ge dogedoge dogedoge
+ d ogedogedoge doged oge dogedog ed ogedogedoge do ge dog edo gedoge
+ d ogedoge dogedogedo ge dogedogedo ge dog edoge dogedo gedoged og edogedog
+ e dog edo gedoged oge dog edogedog edogedog edogedoge dogedogedog edo
+ g edogedogedo gedog edo gedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedoged og
 
 
-!function ($) {
-
-  "use strict"; // jshint ;_;
+edogedoge dog e
+
+  doge dogedoge do gedoge dog
 
 
- /* ALERT CLASS DEFINITION
-  * ====================== */
-
-  var dismiss = '[data-dismiss="alert"]'
-    , Alert = function (el) {
-        $(el).on('click', dismiss, this.close)
-      }
+ ed ogedo gedog edogedoged
+  o gedogedogedogedogedoge do
+
+  ged ogedoge d ogedogedogedogedogedoged
+    o gedog e dogedoge doge d
+        ogedogedogedogedo gedogedo gedogedoged
+      o
 
-  Alert.prototype.close = function (e) {
-    var $this = $(this)
-      , selector = $this.attr('data-target')
-      , $parent
-
-    if (!selector) {
-      selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
-    }
+  gedogedogedogedogedog e dogedoge dog e
+    dog edoge d ogedoge
+      d ogedoged o gedogedogedogedogedogedog
+      e dogedog
+
+    ed ogedogedoge d
+      ogedoged o gedogedogedogedoge
+      dogedoge d ogedoged og edogedogedogedogedogedogedogedoged oge dogedog edo ged
+    o
 
-    $parent = $(selector)
+    gedoged o gedogedoged
 
-    e && e.preventDefault()
+    o ge dogedogedogedogedo
 
-    $parent.length || ($parent = $this.hasClass('alert') ? $this : $this.parent())
+    gedogedogedoge do gedogedo g edogedogedogedogedogedo g edoge d ogedogedogedoge
 
-    $parent.trigger(e = $.Event('close'))
+    dogedogedogedoged o gedogedogedogedog
 
-    if (e.isDefaultPrevented()) return
+    ed ogedogedogedogedogedoged ogedog
 
-    $parent.removeClass('in')
+    edogedogedogedogedogedoge
 
-    function removeElement() {
-      $parent
-        .trigger('closed')
-        .remove()
-    }
+    dogedoge dogedogedogedog e
+      dogedog
+        edogedogedogedoged
+        ogedogedo
+    g
 
-    $.support.transition && $parent.hasClass('fade') ?
-      $parent.on($.support.transition.end, removeElement) :
-      removeElement()
-  }
+    edogedogedogedogedog ed ogedogedogedogedogedoged o
+      gedogedogedogedogedogedogedogedogedo gedogedogedoge d
+      ogedogedogedoge
+  d
 
 
- /* ALERT PLUGIN DEFINITION
-  * ======================= */
+ og edoge dogedo gedogedoge
+  d ogedogedogedogedogedoge do
 
-  $.fn.alert = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('alert')
-      if (!data) $this.data('alert', (data = new Alert(this)))
-      if (typeof option == 'string') data[option].call($this)
-    })
-  }
+  gedogedoge d ogedoged ogedoged o
+    gedoge dogedogedogedogedo ge d
+      oge doged o gedoged
+        o gedo g edogedogedogedogedo
+      ge dogedog edogedogedogedogedo gedog e dog edogedogedoge
+      do gedoged ogedog ed ogedogedo gedogedogedogedogedogedo
+    ge
+  d
 
-  $.fn.alert.Constructor = Alert
+  ogedogedogedogedogedog e doged
 
 
- /* ALERT DATA-API
-  * ============== */
+ og edoge dogedoge
+  d ogedogedogedog ed
 
-  $(function () {
-    $('body').on('click.alert.data-api', dismiss, Alert.prototype.close)
-  })
+  ogedogedog ed o
+    gedogedogedogedogedogedogedogedogedo gedogedo gedogedogedogedogedoge
+  do
 
-}(window.jQuery);/* ============================================================
- * bootstrap-button.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#buttons
- * ============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
-
+gedogedogedogedoged ogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedoged ogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedo gedo gedogedo gedo
+ g
+ e dogedoge doged oge dogedo gedogedo gedoged oge doge dogedogedog
+ e dog edo ged oge doge doge dogedo ge dogedogedo gedo ged ogedoged
+ o ged oge dogedo g edog ed oge dogedog ed
+ o
+ g edogedogedogedogedogedogedogedogedogedoged
+ o
+ g edoged ogedoged og edogedoged oge do gedoge do ge dogedoge dogedoge
+ d ogedogedoge doged oge dogedog ed ogedogedoge do ge dog edo gedoge
+ d ogedoge dogedogedo ge dogedogedo ge dog edoge dogedo gedoged og edogedog
+ e dog edo gedoged oge dog edogedog edogedog edogedoge dogedogedog edo
+ g edogedogedo gedog edo gedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedog ed
+
 
-!function ($) {
+ogedogedo ged o
 
-  "use strict"; // jshint ;_;
+  gedo gedogedo ge dogedo ged
 
 
- /* BUTTON PUBLIC CLASS DEFINITION
-  * ============================== */
+ og edoged ogedog edoge dogedogedo
+  g edogedogedogedogedogedogedoged og
 
-  var Button = function (element, options) {
-    this.$element = $(element)
-    this.options = $.extend({}, $.fn.button.defaults, options)
-  }
-
-  Button.prototype.setState = function (state) {
-    var d = 'disabled'
-      , $el = this.$element
-      , data = $el.data()
-      , val = $el.is('input') ? 'val' : 'html'
-
-    state = state + 'Text'
-    data.resetText || $el.data('resetText', $el[val]())
-
-    $el[val](data[state] || this.options[state])
-
-    // push to event loop to allow forms to submit
-    setTimeout(function () {
-      state == 'loadingText' ?
-        $el.addClass(d).attr(d, d) :
-        $el.removeClass(d).removeAttr(d)
-    }, 0)
-  }
-
-  Button.prototype.toggle = function () {
-    var $parent = this.$element.parent('[data-toggle="buttons-radio"]')
-
-    $parent && $parent
-      .find('.active')
-      .removeClass('active')
-
-    this.$element.toggleClass('active')
-  }
-
-
- /* BUTTON PLUGIN DEFINITION
-  * ======================== */
-
-  $.fn.button = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('button')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('button', (data = new Button(this, options)))
-      if (option == 'toggle') data.toggle()
-      else if (option) data.setState(option)
-    })
-  }
-
-  $.fn.button.defaults = {
-    loadingText: 'loading...'
-  }
-
-  $.fn.button.Constructor = Button
-
-
- /* BUTTON DATA-API
-  * =============== */
-
-  $(function () {
-    $('body').on('click.button.data-api', '[data-toggle^=button]', function ( e ) {
-      var $btn = $(e.target)
-      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
-      $btn.button('toggle')
-    })
-  })
-
-}(window.jQuery);/* ==========================================================
- * bootstrap-carousel.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#carousel
- * ==========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* CAROUSEL CLASS DEFINITION
-  * ========================= */
-
-  var Carousel = function (element, options) {
-    this.$element = $(element)
-    this.options = options
-    this.options.slide && this.slide(this.options.slide)
-    this.options.pause == 'hover' && this.$element
-      .on('mouseenter', $.proxy(this.pause, this))
-      .on('mouseleave', $.proxy(this.cycle, this))
-  }
-
-  Carousel.prototype = {
-
-    cycle: function (e) {
-      if (!e) this.paused = false
-      this.options.interval
-        && !this.paused
-        && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
-      return this
-    }
-
-  , to: function (pos) {
-      var $active = this.$element.find('.active')
-        , children = $active.parent().children()
-        , activePos = children.index($active)
-        , that = this
-
-      if (pos > (children.length - 1) || pos < 0) return
-
-      if (this.sliding) {
-        return this.$element.one('slid', function () {
-          that.to(pos)
-        })
-      }
-
-      if (activePos == pos) {
-        return this.pause().cycle()
-      }
-
-      return this.slide(pos > activePos ? 'next' : 'prev', $(children[pos]))
-    }
-
-  , pause: function (e) {
-      if (!e) this.paused = true
-      clearInterval(this.interval)
-      this.interval = null
-      return this
-    }
-
-  , next: function () {
-      if (this.sliding) return
-      return this.slide('next')
-    }
-
-  , prev: function () {
-      if (this.sliding) return
-      return this.slide('prev')
-    }
-
-  , slide: function (type, next) {
-      var $active = this.$element.find('.active')
-        , $next = next || $active[type]()
-        , isCycling = this.interval
-        , direction = type == 'next' ? 'left' : 'right'
-        , fallback  = type == 'next' ? 'first' : 'last'
-        , that = this
-        , e = $.Event('slide')
-
-      this.sliding = true
-
-      isCycling && this.pause()
-
-      $next = $next.length ? $next : this.$element.find('.item')[fallback]()
-
-      if ($next.hasClass('active')) return
-
-      if ($.support.transition && this.$element.hasClass('slide')) {
-        this.$element.trigger(e)
-        if (e.isDefaultPrevented()) return
-        $next.addClass(type)
-        $next[0].offsetWidth // force reflow
-        $active.addClass(direction)
-        $next.addClass(direction)
-        this.$element.one($.support.transition.end, function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active')
-          $active.removeClass(['active', direction].join(' '))
-          that.sliding = false
-          setTimeout(function () { that.$element.trigger('slid') }, 0)
-        })
-      } else {
-        this.$element.trigger(e)
-        if (e.isDefaultPrevented()) return
-        $active.removeClass('active')
-        $next.addClass('active')
-        this.sliding = false
-        this.$element.trigger('slid')
-      }
-
-      isCycling && this.cycle()
-
-      return this
-    }
-
-  }
-
-
- /* CAROUSEL PLUGIN DEFINITION
-  * ========================== */
-
-  $.fn.carousel = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('carousel')
-        , options = $.extend({}, $.fn.carousel.defaults, typeof option == 'object' && option)
-      if (!data) $this.data('carousel', (data = new Carousel(this, options)))
-      if (typeof option == 'number') data.to(option)
-      else if (typeof option == 'string' || (option = options.slide)) data[option]()
-      else if (options.interval) data.cycle()
-    })
-  }
-
-  $.fn.carousel.defaults = {
-    interval: 5000
-  , pause: 'hover'
-  }
-
-  $.fn.carousel.Constructor = Carousel
-
-
- /* CAROUSEL DATA-API
-  * ================= */
-
-  $(function () {
-    $('body').on('click.carousel.data-api', '[data-slide]', function ( e ) {
-      var $this = $(this), href
-        , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-        , options = !$target.data('modal') && $.extend({}, $target.data(), $this.data())
-      $target.carousel(options)
-      e.preventDefault()
-    })
-  })
-
-}(window.jQuery);/* =============================================================
- * bootstrap-collapse.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#collapse
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* COLLAPSE PUBLIC CLASS DEFINITION
-  * ================================ */
-
-  var Collapse = function (element, options) {
-    this.$element = $(element)
-    this.options = $.extend({}, $.fn.collapse.defaults, options)
-
-    if (this.options.parent) {
-      this.$parent = $(this.options.parent)
-    }
-
-    this.options.toggle && this.toggle()
-  }
-
-  Collapse.prototype = {
-
-    constructor: Collapse
-
-  , dimension: function () {
-      var hasWidth = this.$element.hasClass('width')
-      return hasWidth ? 'width' : 'height'
-    }
-
-  , show: function () {
-      var dimension
-        , scroll
-        , actives
-        , hasData
-
-      if (this.transitioning) return
-
-      dimension = this.dimension()
-      scroll = $.camelCase(['scroll', dimension].join('-'))
-      actives = this.$parent && this.$parent.find('> .accordion-group > .in')
-
-      if (actives && actives.length) {
-        hasData = actives.data('collapse')
-        if (hasData && hasData.transitioning) return
-        actives.collapse('hide')
-        hasData || actives.data('collapse', null)
-      }
-
-      this.$element[dimension](0)
-      this.transition('addClass', $.Event('show'), 'shown')
-      this.$element[dimension](this.$element[0][scroll])
-    }
-
-  , hide: function () {
-      var dimension
-      if (this.transitioning) return
-      dimension = this.dimension()
-      this.reset(this.$element[dimension]())
-      this.transition('removeClass', $.Event('hide'), 'hidden')
-      this.$element[dimension](0)
-    }
-
-  , reset: function (size) {
-      var dimension = this.dimension()
-
-      this.$element
-        .removeClass('collapse')
-        [dimension](size || 'auto')
-        [0].offsetWidth
-
-      this.$element[size !== null ? 'addClass' : 'removeClass']('collapse')
-
-      return this
-    }
-
-  , transition: function (method, startEvent, completeEvent) {
-      var that = this
-        , complete = function () {
-            if (startEvent.type == 'show') that.reset()
-            that.transitioning = 0
-            that.$element.trigger(completeEvent)
-          }
-
-      this.$element.trigger(startEvent)
-
-      if (startEvent.isDefaultPrevented()) return
-
-      this.transitioning = 1
-
-      this.$element[method]('in')
-
-      $.support.transition && this.$element.hasClass('collapse') ?
-        this.$element.one($.support.transition.end, complete) :
-        complete()
-    }
-
-  , toggle: function () {
-      this[this.$element.hasClass('in') ? 'hide' : 'show']()
-    }
-
-  }
-
-
- /* COLLAPSIBLE PLUGIN DEFINITION
-  * ============================== */
-
-  $.fn.collapse = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('collapse')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('collapse', (data = new Collapse(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.collapse.defaults = {
-    toggle: true
-  }
-
-  $.fn.collapse.Constructor = Collapse
-
-
- /* COLLAPSIBLE DATA-API
-  * ==================== */
-
-  $(function () {
-    $('body').on('click.collapse.data-api', '[data-toggle=collapse]', function ( e ) {
-      var $this = $(this), href
-        , target = $this.attr('data-target')
-          || e.preventDefault()
-          || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
-        , option = $(target).data('collapse') ? 'toggle' : $this.data()
-      $(target).collapse(option)
-    })
-  })
-
-}(window.jQuery);/* ============================================================
- * bootstrap-dropdown.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#dropdowns
- * ============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* DROPDOWN CLASS DEFINITION
-  * ========================= */
-
-  var toggle = '[data-toggle="dropdown"]'
-    , Dropdown = function (element) {
-        var $el = $(element).on('click.dropdown.data-api', this.toggle)
-        $('html').on('click.dropdown.data-api', function () {
-          $el.parent().removeClass('open')
-        })
-      }
-
-  Dropdown.prototype = {
-
-    constructor: Dropdown
-
-  , toggle: function (e) {
-      var $this = $(this)
-        , $parent
-        , selector
-        , isActive
-
-      if ($this.is('.disabled, :disabled')) return
-
-      selector = $this.attr('data-target')
-
-      if (!selector) {
-        selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
-      }
-
-      $parent = $(selector)
-      $parent.length || ($parent = $this.parent())
-
-      isActive = $parent.hasClass('open')
-
-      clearMenus()
-
-      if (!isActive) $parent.toggleClass('open')
-
-      return false
-    }
-
-  }
-
-  function clearMenus() {
-    $(toggle).parent().removeClass('open')
-  }
-
-
-  /* DROPDOWN PLUGIN DEFINITION
-   * ========================== */
-
-  $.fn.dropdown = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('dropdown')
-      if (!data) $this.data('dropdown', (data = new Dropdown(this)))
-      if (typeof option == 'string') data[option].call($this)
-    })
-  }
-
-  $.fn.dropdown.Constructor = Dropdown
-
+  edo gedoge d ogedoged ogedogedo gedogedo g
+    edogedogedoge d ogedogedog
+    edogedogedog e dogedogedoge dogedogedogedogedoged ogedoged
+  o
+
+  gedogedogedogedogedogedog e dogedoge dogedog e
+    dog e d ogedogedog
+      e dog e dogedogedoged
+      o gedo g edogedoged
+      o ged o gedogedogedoged o gedog e dogedo
+
+    gedog e doged o gedoge
+    dogedogedogedo ge dogedogedogedogedoged ogedogedoge
+
+    dogedogedogedogedoge do gedogedogedogedogedo
+
+    ge doge do gedog edog ed ogedo gedog ed ogedog
+    edogedogedogedogedo ge d
+      ogedo ge dogedogedoged o
+        gedogedogedogedogedoged og e
+        dogedogedogedogedogedogedogedoge
+    do ge
+  d
+
+  ogedogedogedogedogedoge d ogedoged og e
+    dog edogedo g edogedogedogedogedogedogedogedogedogedogedogedogedoge
+
+    dogedog ed ogedoge
+      dogedogedogedoge
+      dogedogedogedogedogedo
+
+    gedogedogedogedogedogedogedogedoged
+  o
+
+
+ ge dogedo gedoge dogedogedo
+  g edogedogedogedogedogedog ed
+
+  ogedogedoge d ogedoged ogedoged o
+    gedoge dogedogedogedogedo ge d
+      oge doged o gedoged
+        o gedo g edogedogedogedogedog
+        e dogedog e dogedo gedoge do gedogedo ge dogedo
+      ge dogedog edogedogedogedogedog edoge d oge dogedogedoge dogedogedo
+      ge dogedog ed ogedogedo gedogedogedog
+      edog ed ogedoged ogedogedogedogedogedo
+    ge
+  d
+
+  ogedogedogedogedoged o g
+    edogedogedog edogedogedog
+  e
+
+  dogedogedogedogedogedog e dogedo
+
+
+ ge dogedo gedogedo
+  g edogedogedogedo ge
+
+  dogedogedo ge d
+    ogedogedogedogedogedogedogedogedogedo gedogedogedogedogedogedo gedogedo g e d o
+      ged oged o gedogedoged
+      og edogedogedogedogedogedo gedo g edogedogedogedogedog
+      edogedogedogedogedoge
+    do
+  ge
+
+dogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedog edoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedog edog edogedog edog
+ e
+ d ogedoged ogedo ged ogedog edogedog edogedo ged oged ogedogedoge
+ d oge dog edo ged oged oged ogedog ed ogedogedog edog edo gedogedo
+ g edo ged ogedog e doge do ged ogedoge do
+ g
+ e dogedogedogedogedogedogedogedogedogedogedo
+ g
+ e dogedo gedogedo ge dogedogedo ged og edoged og ed ogedoged ogedoged
+ o gedogedoged ogedo ged ogedoge do gedogedoged og ed oge dog edoged
+ o gedoged ogedogedog ed ogedogedog ed oge doged ogedog edogedo ge dogedoge
+ d oge dog edogedo ged oge dogedoge dogedoge dogedoged ogedogedoge dog
+ e dogedogedog edoge dog edogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedo ge
+
+
+dogedoged oge d
+
+  oged ogedoged og edoged oge
+
+
+ do gedogedo gedog edogedoged
+  o gedogedogedogedogedogedog ed
+
+  oge dogedoge d ogedoged ogedogedo gedogedo g
+    edogedogedoge d ogedogedog
+    edogedogedog e dogedog
+    edogedogedogedoged og edogedogedogedogedogedogedoged
+    ogedogedogedogedog ed ogedoge do gedogedogedog
+      edogedogedogedoge dogedogedogedogedog edoged
+      ogedogedogedogedo gedogedogedogedoged ogedog
+  e
+
+  dogedogedogedogedo g e
+
+    dogedo gedogedo ged o
+      ge doge dogedogedog e doged
+      ogedogedogedogedogedo
+        ge dogedogedoge
+        do gedogedogedoge d ogedogedogedogedogedogedogedog edoged ogedogedogedogedogedoge
+      dogedo gedo
+    g
+
+  e dog edogedog edoge d
+      oge dogedog e dogedogedogedogedogedogedoged
+        o gedogedo g edogedogedogedogedogedogedo
+        g edogedoge d ogedogedogedogedogedoge
+        d oged o gedo
+
+      ge doge d ogedogedogedoged o ge do ged o ge dogedo
+
+      ge dogedogedogedo g
+        edoged ogedogedogedogedogedogedo gedogedo ge d
+          ogedogedoged
+        og
+      e
+
+      do gedogedoge do gedo g
+        edoged ogedogedogedogedoged
+      o
+
+      gedoge dogedogedogedo g edogedoge d ogedog e dogedog edogedogedogedoge
+    d
+
+  o gedoge dogedoge dog e
+      do gedo gedogedoged o gedo
+      gedogedogedogedogedogedogedo
+      gedogedogedog e doge
+      dogedo gedo
+    g
+
+  e doged ogedoged og e
+      do gedogedogedoge dogedo
+      gedoge dogedogedogedogedo
+    g
+
+  e doged ogedoged og e
+      do gedogedogedoge dogedo
+      gedoge dogedogedogedogedo
+    g
+
+  e dogedo gedogedo gedoge doged o
+      ged ogedoge d ogedogedogedogedogedogedogedo
+        g edoge d oged og edogedogedogedo
+        g edogedoge d ogedogedogedo
+        g edogedoge d oged og edoged o gedoge d ogedoge
+        d ogedoged  o gedo ge dogedo g edogedo g edoged
+        o gedo g edog
+        e d o gedogedogedogedo
+
+      gedogedogedo g edog
+
+      edogedoge do gedogedogedo
+
+      gedog e dogedogedoge d ogedo g edogedogedogedogedogedogedogedogedogedo
+
+      ge dogedogedogedogedogedogedo gedoge
+
+      do gedogedogedogedogedog ed ogedogedogedogedogedogedogedoged o
+        gedogedogedogedogedogedo
+        ge dogedogedogedogedogedoge dogedo
+        gedogedogedogedogedo
+        gedogedogedogedogedo ge doged ogedog
+        edogedogedogedogedogedogedo
+        gedogedogedogedogedogedog
+        edogedogedogedogedogedogedogedogedogedogedo gedogedo ge d
+          ogedogedogedogedogedoged ogedogedogedogedo gedogedogedogedogedoge
+          dogedogedogedogedogedogedogedo gedogedogedogedog edo
+          gedogedogedo g edoge
+          dogedogedogedogedog ed o gedogedogedogedogedogedogedog ed og
+        ed
+      o gedo g
+        edogedogedogedogedogedog
+        ed ogedogedogedogedogedoged ogedog
+        edogedogedogedogedogedogedoge
+        dogedogedogedogedogedoge
+        dogedogedoge d ogedo
+        gedogedogedogedogedogedogedog
+      e
+
+      dogedoged og edogedogedog
+
+      edoged oged
+    o
+
+  g
+
+
+ ed ogedoged ogedog edogedoged
+  o gedogedogedogedogedogedoge do
+
+  gedogedogedog e dogedoge dogedoge d
+    ogedog edogedogedogedoged og e
+      dog edoge d ogedoge
+        d oged o gedogedogedogedogedoge
+        d ogedoge d ogedogedoged ogedogedogedogedogedoge dogedo gedoge do gedogedo ge dogedog
+      ed ogedoge dogedogedogedogedogedo gedog e dog edogedogedoged ogedogedog
+      ed ogedoge dogedo ge dogedoged ogedogedogedoge
+      doge do gedoged ogedog ed ogedoged og edogedo g edogedogedogedo gedogedogedoge
+      doge do gedogedogedogedoge dogedogedoge
+    do
+  g
+
+  edogedogedogedogedoged o g
+    edogedoge doge
+  d ogedog edogedo
+  g
+
+  edogedogedogedogedogedoge d ogedoged
+
+
+ og edogedog edogedog
+  e dogedogedogedoged og
+
+  edogedoged og e
+    dogedogedogedogedogedogedogedogedogedog edogedogedogedo gedogedo g e d o
+      ged ogedo g edogedog edog
+        e dogedog e dogedogedogedogedogedogedog ed ogedo g edogedogedogedogedo ge dogedogedogedogedogedogedogedo gedo gedoged oge dog
+        e dogedog e dogedogedogedogedogedo ge dogedogedoge dogedogedogedog edogedogedoge
+      dogedogedogedogedogedoged
+      ogedogedogedogedog
+    ed
+  og
+
+edogedogedogedogedo gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedogedoged ogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedoge doge dogedoge doge
+ d
+ o gedogedo gedog edo gedoge dogedoge dogedog edo gedo gedogedoged
+ o ged oge dog edo gedo gedo gedoge do gedogedoge doge dog edogedog
+ e dog edo gedoge d oged og edo gedoged og
+ e
+ d ogedogedogedogedogedogedogedogedogedogedog
+ e
+ d ogedog edogedog ed ogedogedog edo ge dogedo ge do gedogedo gedogedo
+ g edogedogedo gedog edo gedoged og edogedogedo ge do ged oge dogedo
+ g edogedo gedogedoge do gedogedoge do ged ogedo gedoge dogedog ed ogedoged
+ o ged oge dogedog edo ged ogedoged ogedoged ogedogedo gedogedoged oge
+ d ogedogedoge doged oge dogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged og
+
+
+edogedoge dog e
+
+  doge dogedoge do gedoge dog
+
+
+ ed ogedoged ogedog edoge dogedogedo
+  g edogedogedogedogedogedogedogedog ed
+
+  oge dogedoge d ogedoged ogedogedo gedogedo g
+    edogedogedoge d ogedogedog
+    edogedogedog e dogedogedoge dogedogedogedogedogedog edogedog
+
+    ed ogedogedogedogedogedo g
+      edogedogedog e dogedogedogedogedogedo
+    g
+
+    edogedogedogedogedo ge dogedogedoged
+  o
+
+  gedogedogedogedoge d o
+
+    gedogedogedo gedogedo
+
+  g edogedoged ogedoged og e
+      dog edogedog e dogedogedogedogedogedogedogedog
+      edoged ogedoged o gedoged o gedogedo
+    g
+
+  e doged ogedoged og e
+      dog edogedoge
+        d ogedog
+        e dogedog
+        e dogedog
+
+      ed ogedogedogedogedoged ogedog
+
+      edogedoge d ogedogedogedoged
+      ogedog e dogedogedogedogedogedo gedogedogedogedogedog
+      edogedo g edogedogedog ed ogedogedogedogedoged ogedogedogedoged o gedog
+
+      ed ogedoged og edogedogedogedo g
+        edogedo g edogedogedogedogedogedog
+        ed ogedoged og edogedogedogedogedoged ogedog
+        edogedogedogedogedogedog
+        edogedo ge dogedogedogedogedogedoge doged
+      o
+
+      gedogedogedogedogedogedoged
+      ogedogedogedogedogedogedoge dogedogedogedoge dogedoge
+      dogedogedogedogedogedogedogedogedogedogedogedogedo
+    g
+
+  e doged ogedoged og e
+      dog edogedoge
+      do gedogedogedogedogedo gedoge
+      dogedoged o gedogedogedogedo
+      gedogedogedogedogedogedogedogedogedoge
+      dogedogedogedogedogedogedogedo gedogedogedogedo gedogedog
+      edogedogedogedogedogedogedo
+    g
+
+  e dogedo gedogedo gedoge d
+      oge dogedoged o gedogedogedogedo
+
+      gedogedogedog
+        edogedogedogedogedogedog
+        edogedogedogedog ed ogedoge
+        dogedogedogedog
+
+      edogedogedogedoged oge doge d ogedogedog e dogedogedogedogedogedogedo
+
+      gedoge doge
+    d
+
+  o gedogedoged ogedoged ogedoged ogedogedoge dogedogedogedo g
+      edo gedo g edog
+        e dogedoge d ogedoged og e
+            do gedogedogedogedo ge dogedog edogedogedog
+            edogedogedogedoged o g
+            edogedogedogedogedogedogedogedogedog
+          e
+
+      dogedogedogedogedogedogedogedoged
+
+      og edogedogedogedogedogedogedogedoge dogedo
+
+      gedogedogedogedoge d o
+
+      gedogedogedogedogedogedoged
+
+      ogedogedogedogedoged og edogedogedogedogedogedogedogedoged o
+        gedogedogedogedogedogedogedogedogedogedoged ogedogedo g
+        edogedoged
+    o
+
+  g edogedo gedogedo ge d
+      ogedogedogedogedogedogedogedogedo g edoged o gedogedog
+    e
+
+  d
+
+
+ og edogedogedo gedoge dogedogedo
+  g edogedogedogedogedogedogedoged og
+
+  edogedogedoge d ogedoged ogedoged o
+    gedoge dogedogedogedogedo ge d
+      oge doged o gedoged
+        o gedo g edogedogedogedogedoged
+        o gedoged o gedoge dogedo ge dogedoge do gedoge
+      do gedoged ogedogedogedogedogedog edoge d oge dogedogedogedo gedogedoge
+      do gedoged ogedog ed ogedogedo gedogedogedoge
+    do
+  g
+
+  edogedogedogedogedoged o g
+    edogedo gedo
+  g
+
+  edogedogedogedogedogedoge d ogedoged
+
+
+ og edogedogedo gedogedo
+  g edogedogedogedogedog ed
+
+  ogedogedog ed o
+    gedogedogedogedogedogedogedogedogedoged ogedogedogedogedogedogedo gedogedo g e d o
+      ged ogedo g edogedog edog
+        e dogedo g edogedogedogedogedogedoge
+          do gedogedogedogedoge
+          do gedog e dogedogedogedogedog ed ogedogedogedogedogedogedogedog edo gedoged oge dog
+        e dogedo g edogedogedogedogedogedoged o gedogedo g edogedogedog
+      edogedogedogedogedogedoged
+    og
+  ed
+
+ogedogedogedogedoge dogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedogedogedogedo gedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedoged oged ogedoged oged
+ o
+ g edogedog edoge dog edoged ogedoged ogedoge dog edog edogedogedo
+ g edo ged oge dog edog edog edoged og edogedoged oged oge dogedoge
+ d oge dog edoged o gedo ge dog edogedo ge
+ d
+ o gedogedogedogedogedogedogedogedogedogedoge
+ d
+ o gedoge dogedoge do gedogedoge dog ed ogedog ed og edogedog edogedog
+ e dogedogedog edoge dog edogedo ge dogedogedog ed og edo ged ogedog
+ e dogedog edogedoged og edogedoged og edo gedog edoged ogedoge do gedogedo
+ g edo ged ogedoge dog edo gedogedo gedogedo gedogedog edogedogedo ged
+ o gedogedoged ogedo ged ogedoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo ge
+
+
+dogedoged oge d
+
+  oged ogedoged og edoged oge
+
+
+ do gedogedo gedog edogedoged
+  o gedogedogedogedogedogedog ed
+
+  oge dogedo g edogedogedogedogedogedoged
+    o gedogedo g edogedog edogedoge d
+        oge dog e dogedogedogedogedogedogedogedogedogedoge dogedogedoge
+        dogedogedogedogedogedogedogedogedogedog edogedog ed o
+          gedogedogedogedogedogedogedogedo
+        ge
+      d
+
+  ogedogedogedogedog e d
+
+    ogedogedoged ogedoged
+
+  o gedoged ogedoged oge d
+      oge doged o gedoged
+        o gedoged
+        o gedogedo
+        g edogedog
+
+      ed ogedogedogedogedogedo gedogedogedo gedoge
+
+      dogedoge d ogedogedogedogedogedogedo
+
+      ge dogedogedog e
+        dogedoge d ogedogedogedogedog
+        edogedog e dogedoge do gedogedogedogedogedogedogedogedoge dog edogedo ged oge
+      d
+
+      ogedoge d ogedogedoge
+      dogedogedogedo ge dogedoge d ogedogedogedoge
+
+      dogedoge d ogedogedogedogedogedoged
+
+      ogedogedoged
+
+      og edogedogedo gedogedogedogedogedogedoged
+
+      ogedog edoge
+    d
+
+  o
+
+  gedogedo gedogedogedo g
+    edogedogedogedogedogedogedogedogedoged
+  o
+
+
+  ge dogedoge dogedo gedogedoge
+   d ogedogedogedogedogedogedog ed
+
+  ogedogedogedo g edogedog edogedog e
+    dogedo gedogedogedogedoge do g
+      edo gedog e dogedog
+        e doge d ogedogedogedogedogedog
+      ed ogedoge dogedogedogedogedogedo gedog e dog edogedogedogedog
+      ed ogedoge dogedo ge dogedoged ogedogedogedogedogedoged
+    og
+  e
+
+  dogedogedogedogedogedoged o gedogedo
+
 
-  /* APPLY TO STANDARD DROPDOWN ELEMENTS
-   * =================================== */
+  ge doged og edogedog edogedog edogedog
+   e dogedogedogedogedogedogedogedogedog ed
 
-  $(function () {
-    $('html').on('click.dropdown.data-api', clearMenus)
-    $('body')
-      .on('click.dropdown', '.dropdown form', function (e) { e.stopPropagation() })
-      .on('click.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-  })
+  ogedogedog ed o
+    gedogedogedogedogedogedogedogedogedoged ogedogedoge
+    dogedoged
+      ogedogedogedogedogedo gedogedoge dogedo gedogedo ged o gedogedogedogedoged og
+      edogedogedogedogedogedogedoged ogedoge dogedogedogedogedogedogedo
+  ge
 
-}(window.jQuery);/* =========================================================
- * bootstrap-modal.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#modals
- * =========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================= */
+dogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedogedogedog edoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedoge doge dogedoge doge
+ d
+ o gedogedo gedog edo gedoge dogedoge dogedog edo gedo gedogedoged
+ o ged oge dog edo gedo gedo gedoge do gedogedoge doge dog edogedog
+ e dog edo gedoge d oged og edo gedoged og
+ e
+ d ogedogedogedogedogedogedogedogedogedogedog
+ e
+ d ogedog edogedog ed ogedogedog edo ge dogedo ge do gedogedo gedogedo
+ g edogedogedo gedog edo gedoged og edogedogedo ge do ged oge dogedo
+ g edogedo gedogedoge do gedogedoge do ged ogedo gedoge dogedog ed ogedoged
+ o ged oge dogedog edo ged ogedoged ogedoged ogedogedo gedogedoged oge
+ d ogedogedoge doged oge dogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedo ge
 
 
-!function ($) {
+dogedoged oge d
 
-  "use strict"; // jshint ;_;
+  oged ogedoged og edoged oge
 
 
- /* MODAL CLASS DEFINITION
-  * ====================== */
+ do gedog edoge dogedogedo
+  g edogedogedogedogedoged og
 
-  var Modal = function (content, options) {
-    this.options = options
-    this.$element = $(content)
-      .delegate('[data-dismiss="modal"]', 'click.dismiss.modal', $.proxy(this.hide, this))
-  }
+  edo gedog e dogedoge dogedoged ogedoged o
+    gedogedogedo g edogedo
+    gedogedogedog e dogedogedo
+      gedogedogedogedogedogedogedogedoged ogedogedogedogedogedog edogedogedogedoged ogedog
+  e
 
-  Modal.prototype = {
+  dogedogedogedog e d
 
-      constructor: Modal
+      ogedogedoged ogedo
 
-    , toggle: function () {
-        return this[!this.isShown ? 'show' : 'hide']()
-      }
+    g edogedo gedogedo ge d
+        ogedog edogedogedogedoged o gedoge d ogedogedo
+      g
 
-    , show: function () {
-        var that = this
-          , e = $.Event('show')
+    e doged ogedoged og e
+        dog edog e doge
+          d o g edogedogedogedo
 
-        this.$element.trigger(e)
+        gedogedogedogedogedogedo
 
-        if (this.isShown || e.isDefaultPrevented()) return
+        ge dogedogedoged og edogedogedogedogedogedo gedoge
 
-        $('body').addClass('modal-open')
+        dogedogedogedogedogedogedogedoge
 
-        this.isShown = true
+        dogedogedoge d oged
 
-        escape.call(this)
-        backdrop.call(this, function () {
-          var transition = $.support.transition && that.$element.hasClass('fade')
+        ogedogedogedogedo
+        gedogedogedogedoged ogedoged og e
+          dog edogedoged o gedogedogedogedogedo ge dogedogedogedogedogedogedogedo
 
-          if (!that.$element.parent().length) {
-            that.$element.appendTo(document.body) //don't move modals dom position
-          }
+          ge dogedogedogedogedogedogedogedoge d
+            ogedogedogedogedogedogedogedogedogedo gedoged oged ogedog edo gedogedo
+          g
 
-          that.$element
-            .show()
+          edogedogedoge
+            dogedog
 
-          if (transition) {
-            that.$element[0].offsetWidth // force reflow
-          }
+          ed ogedogedoged o
+            gedogedogedogedogedogedogedo ge doged ogedog
+          e
 
-          that.$element.addClass('in')
+          dogedogedogedogedogedogedoge
 
-          transition ?
-            that.$element.one($.support.transition.end, function () { that.$element.trigger('shown') }) :
-            that.$element.trigger('shown')
+          dogedogedo g
+            edogedogedogedogedogedogedogedogedogedogedo gedogedo ge d ogedogedogedogedogedogedogedog ed o
+            gedogedogedogedogedogedogedoge
 
-        })
-      }
+        do
+      g
 
-    , hide: function (e) {
-        e && e.preventDefault()
+    e doged ogedoged oge d
+        o ge dogedogedogedogedo
 
-        var that = this
+        ged oged o gedo
 
-        e = $.Event('hide')
+        g e dogedogedogedog
 
-        this.$element.trigger(e)
+        edogedogedogedogedogedog
 
-        if (!this.isShown || e.isDefaultPrevented()) return
+        ed ogedogedogedog ed ogedogedogedogedogedoge dogedo
 
-        this.isShown = false
+        gedogedogedo g edoge
 
-        $('body').removeClass('modal-open')
+        dogedogedogedogedogedogedogedogedog
 
-        escape.call(this)
+        edogedogedogedoge
 
-        this.$element.removeClass('in')
+        dogedogedogedogedogedogedogedog
 
-        $.support.transition && this.$element.hasClass('fade') ?
-          hideWithTransition.call(this) :
-          hideModal.call(this)
-      }
+        edogedogedogedogedog ed ogedogedogedogedogedogedogedog e
+          dogedogedogedogedogedogedoged o
+          gedogedogedogedogedo
+      g
 
-  }
+  e
 
 
- /* MODAL PRIVATE METHODS
-  * ===================== */
+ do gedog edogedo gedoged
+  o gedogedogedogedogedog ed
 
-  function hideWithTransition() {
-    var that = this
-      , timeout = setTimeout(function () {
-          that.$element.off($.support.transition.end)
-          hideModal.call(that)
-        }, 500)
+  ogedoged ogedogedogedogedoged o
+    ged oged o gedo
+      g edogedo g edogedogedogedogedo ge d
+          ogedogedogedogedogedogedogedogedogedogedoge
+          dogedogedogedogedoge
+        do gedo
 
-    this.$element.one($.support.transition.end, function () {
-      clearTimeout(timeout)
-      hideModal.call(that)
-    })
-  }
+    gedogedogedogedogedogedogedogedogedogedoged ogedoged og e
+      dogedogedogedogedoged
+      ogedogedogedogedoged
+    og
+  e
 
-  function hideModal(that) {
-    this.$element
-      .hide()
-      .trigger('hidden')
-
-    backdrop.call(this)
-  }
-
-  function backdrop(callback) {
-    var that = this
-      , animate = this.$element.hasClass('fade') ? 'fade' : ''
-
-    if (this.isShown && this.options.backdrop) {
-      var doAnimate = $.support.transition && animate
-
-      this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
-        .appendTo(document.body)
-
-      if (this.options.backdrop != 'static') {
-        this.$backdrop.click($.proxy(this.hide, this))
-      }
-
-      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
-
-      this.$backdrop.addClass('in')
-
-      doAnimate ?
-        this.$backdrop.one($.support.transition.end, callback) :
-        callback()
-
-    } else if (!this.isShown && this.$backdrop) {
-      this.$backdrop.removeClass('in')
+  dogedoge dogedogedogedog e
+    dogedogedoged
+      ogedoge
+      dogedogedogedogedo
+
+    gedogedogedogedoged
+  o
+
+  gedogedo gedogedogedogedoge d
+    oge doge d oged
+      o gedoged o gedogedogedogedogedogedogedoge d ogedog e do
+
+    ge dogedogedoged og edogedogedogedogedoged o
+      ged ogedogedo g edogedogedogedogedog ed ogedoge
+
+      dogedogedogedo g edogedo gedogedogedogedogedog e d ogedoge d og edog
+        edogedogedogedogedogedog
+
+      ed ogedogedogedogedogedog ed ogedogedo g
+        edogedogedogedogedogedogedogedogedogedo gedoge
+      d
+
+      og edogedogedo gedogedogedogedogedogedogedog ed ogedo gedoge
+
+      dogedogedogedogedogedogedoged
+
+      ogedogedo g
+        edogedogedogedogedogedogedogedogedogedogedog edogedoge d
+        ogedogedog
+
+    e doge do gedogedogedoge do gedogedogedoged o
+      gedogedogedogedogedogedogedogedo
 
-      $.support.transition && this.$element.hasClass('fade')?
-        this.$backdrop.one($.support.transition.end, $.proxy(removeBackdrop, this)) :
-        removeBackdrop.call(this)
+      gedogedogedogedogedo ge dogedogedogedogedogedogedogedog
+        edogedogedogedogedogedogedogedogedogedogedog edogedogedogedogedogedo gedoge d
+        ogedogedogedogedogedogedo
 
-    } else if (callback) {
-      callback()
-    }
-  }
-
-  function removeBackdrop() {
-    this.$backdrop.remove()
-    this.$backdrop = null
-  }
-
-  function escape() {
-    var that = this
-    if (this.isShown && this.options.keyboard) {
-      $(document).on('keyup.dismiss.modal', function ( e ) {
-        e.which == 27 && that.hide()
-      })
-    } else if (!this.isShown) {
-      $(document).off('keyup.dismiss.modal')
-    }
-  }
-
-
- /* MODAL PLUGIN DEFINITION
-  * ======================= */
-
-  $.fn.modal = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('modal')
-        , options = $.extend({}, $.fn.modal.defaults, $this.data(), typeof option == 'object' && option)
-      if (!data) $this.data('modal', (data = new Modal(this, options)))
-      if (typeof option == 'string') data[option]()
-      else if (options.show) data.show()
-    })
-  }
+    g edog ed ogedogedog e
+      dogedogedo
+    g
+  e
+
+  dogedoge dogedogedogedoge d
+    ogedogedogedogedogedoge
+    dogedogedogedo g edog
+  e
+
+  dogedoge dogedoge d
+    oge doge d oged
+    og edogedogedoge do gedogedogedogedogedoge d
+      ogedogedogedogedogedogedogedogedogedo gedogedo g e d o
+        gedoged og ed og edogedogedo
+      ge
+    d oged og edogedogedogedo g
+      edogedogedogedogedogedogedogedogedoged
+    o
+  g
+
+
+ ed ogedo gedoge dogedogedo
+  g edogedogedogedogedogedo ge
+
+  dogedogedo g edogedog edogedog e
+    dogedo gedogedogedogedoge do g
+      edo gedog e dogedog
+        e doge d ogedogedogedogedoge
+        d ogedoge d ogedogedoged ogedogedogedogedoged ogedogedogedo gedoge dogedo ge dogedoge do gedoged
+      og edogedo gedogedogedogedoged ogedo g edo gedogedoged ogedogedog
+      ed ogedoge dogedo ge dogedoged ogedogedogedog
+      edog ed ogedogedogedog edogedogedo
+    ge
+  d
 
-  $.fn.modal.defaults = {
-      backdrop: true
-    , keyboard: true
-    , show: true
-  }
-
-  $.fn.modal.Constructor = Modal
-
-
- /* MODAL DATA-API
-  * ============== */
-
-  $(function () {
-    $('body').on('click.modal.data-api', '[data-toggle="modal"]', function ( e ) {
-      var $this = $(this), href
-        , $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-        , option = $target.data('modal') ? 'toggle' : $.extend({}, $target.data(), $this.data())
-
-      e.preventDefault()
-      $target.modal(option)
-    })
-  })
-
-}(window.jQuery);/* ===========================================================
- * bootstrap-tooltip.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#tooltips
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ===========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================== */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* TOOLTIP PUBLIC CLASS DEFINITION
-  * =============================== */
-
-  var Tooltip = function (element, options) {
-    this.init('tooltip', element, options)
-  }
-
-  Tooltip.prototype = {
-
-    constructor: Tooltip
-
-  , init: function (type, element, options) {
-      var eventIn
-        , eventOut
-
-      this.type = type
-      this.$element = $(element)
-      this.options = this.getOptions(options)
-      this.enabled = true
-
-      if (this.options.trigger != 'manual') {
-        eventIn  = this.options.trigger == 'hover' ? 'mouseenter' : 'focus'
-        eventOut = this.options.trigger == 'hover' ? 'mouseleave' : 'blur'
-        this.$element.on(eventIn, this.options.selector, $.proxy(this.enter, this))
-        this.$element.on(eventOut, this.options.selector, $.proxy(this.leave, this))
-      }
-
-      this.options.selector ?
-        (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
-        this.fixTitle()
-    }
-
-  , getOptions: function (options) {
-      options = $.extend({}, $.fn[this.type].defaults, options, this.$element.data())
-
-      if (options.delay && typeof options.delay == 'number') {
-        options.delay = {
-          show: options.delay
-        , hide: options.delay
-        }
-      }
-
-      return options
-    }
-
-  , enter: function (e) {
-      var self = $(e.currentTarget)[this.type](this._options).data(this.type)
-
-      if (!self.options.delay || !self.options.delay.show) return self.show()
-
-      clearTimeout(this.timeout)
-      self.hoverState = 'in'
-      this.timeout = setTimeout(function() {
-        if (self.hoverState == 'in') self.show()
-      }, self.options.delay.show)
-    }
-
-  , leave: function (e) {
-      var self = $(e.currentTarget)[this.type](this._options).data(this.type)
-
-      if (this.timeout) clearTimeout(this.timeout)
-      if (!self.options.delay || !self.options.delay.hide) return self.hide()
-
-      self.hoverState = 'out'
-      this.timeout = setTimeout(function() {
-        if (self.hoverState == 'out') self.hide()
-      }, self.options.delay.hide)
-    }
-
-  , show: function () {
-      var $tip
-        , inside
-        , pos
-        , actualWidth
-        , actualHeight
-        , placement
-        , tp
-
-      if (this.hasContent() && this.enabled) {
-        $tip = this.tip()
-        this.setContent()
-
-        if (this.options.animation) {
-          $tip.addClass('fade')
-        }
-
-        placement = typeof this.options.placement == 'function' ?
-          this.options.placement.call(this, $tip[0], this.$element[0]) :
-          this.options.placement
-
-        inside = /in/.test(placement)
-
-        $tip
-          .remove()
-          .css({ top: 0, left: 0, display: 'block' })
-          .appendTo(inside ? this.$element : document.body)
-
-        pos = this.getPosition(inside)
-
-        actualWidth = $tip[0].offsetWidth
-        actualHeight = $tip[0].offsetHeight
-
-        switch (inside ? placement.split(' ')[1] : placement) {
-          case 'bottom':
-            tp = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}
-            break
-          case 'top':
-            tp = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}
-            break
-          case 'left':
-            tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}
-            break
-          case 'right':
-            tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
-            break
-        }
-
-        $tip
-          .css(tp)
-          .addClass(placement)
-          .addClass('in')
-      }
-    }
-
-  , isHTML: function(text) {
-      // html string detection logic adapted from jQuery
-      return typeof text != 'string'
-        || ( text.charAt(0) === "<"
-          && text.charAt( text.length - 1 ) === ">"
-          && text.length >= 3
-        ) || /^(?:[^<]*<[\w\W]+>[^>]*$)/.exec(text)
-    }
-
-  , setContent: function () {
-      var $tip = this.tip()
-        , title = this.getTitle()
-
-      $tip.find('.tooltip-inner')[this.isHTML(title) ? 'html' : 'text'](title)
-      $tip.removeClass('fade in top bottom left right')
-    }
-
-  , hide: function () {
-      var that = this
-        , $tip = this.tip()
-
-      $tip.removeClass('in')
-
-      function removeWithAnimation() {
-        var timeout = setTimeout(function () {
-          $tip.off($.support.transition.end).remove()
-        }, 500)
-
-        $tip.one($.support.transition.end, function () {
-          clearTimeout(timeout)
-          $tip.remove()
-        })
-      }
-
-      $.support.transition && this.$tip.hasClass('fade') ?
-        removeWithAnimation() :
-        $tip.remove()
-    }
-
-  , fixTitle: function () {
-      var $e = this.$element
-      if ($e.attr('title') || typeof($e.attr('data-original-title')) != 'string') {
-        $e.attr('data-original-title', $e.attr('title') || '').removeAttr('title')
-      }
-    }
-
-  , hasContent: function () {
-      return this.getTitle()
-    }
-
-  , getPosition: function (inside) {
-      return $.extend({}, (inside ? {top: 0, left: 0} : this.$element.offset()), {
-        width: this.$element[0].offsetWidth
-      , height: this.$element[0].offsetHeight
-      })
-    }
-
-  , getTitle: function () {
-      var title
-        , $e = this.$element
-        , o = this.options
-
-      title = $e.attr('data-original-title')
-        || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
-
-      return title
-    }
-
-  , tip: function () {
-      return this.$tip = this.$tip || $(this.options.template)
-    }
-
-  , validate: function () {
-      if (!this.$element[0].parentNode) {
-        this.hide()
-        this.$element = null
-        this.options = null
-      }
-    }
-
-  , enable: function () {
-      this.enabled = true
-    }
-
-  , disable: function () {
-      this.enabled = false
-    }
-
-  , toggleEnabled: function () {
-      this.enabled = !this.enabled
-    }
-
-  , toggle: function () {
-      this[this.tip().hasClass('in') ? 'hide' : 'show']()
-    }
-
-  }
-
-
- /* TOOLTIP PLUGIN DEFINITION
-  * ========================= */
-
-  $.fn.tooltip = function ( option ) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('tooltip')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('tooltip', (data = new Tooltip(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.tooltip.Constructor = Tooltip
-
-  $.fn.tooltip.defaults = {
-    animation: true
-  , placement: 'top'
-  , selector: false
-  , template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
-  , trigger: 'hover'
-  , title: ''
-  , delay: 0
-  }
-
-}(window.jQuery);
-/* ===========================================================
- * bootstrap-popover.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#popovers
- * ===========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * =========================================================== */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* POPOVER PUBLIC CLASS DEFINITION
-  * =============================== */
-
-  var Popover = function ( element, options ) {
-    this.init('popover', element, options)
-  }
-
-
-  /* NOTE: POPOVER EXTENDS BOOTSTRAP-TOOLTIP.js
-     ========================================== */
-
-  Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype, {
-
-    constructor: Popover
-
-  , setContent: function () {
-      var $tip = this.tip()
-        , title = this.getTitle()
-        , content = this.getContent()
-
-      $tip.find('.popover-title')[this.isHTML(title) ? 'html' : 'text'](title)
-      $tip.find('.popover-content > *')[this.isHTML(content) ? 'html' : 'text'](content)
-
-      $tip.removeClass('fade top bottom left right in')
-    }
-
-  , hasContent: function () {
-      return this.getTitle() || this.getContent()
-    }
-
-  , getContent: function () {
-      var content
-        , $e = this.$element
-        , o = this.options
-
-      content = $e.attr('data-content')
-        || (typeof o.content == 'function' ? o.content.call($e[0]) :  o.content)
-
-      return content
-    }
-
-  , tip: function () {
-      if (!this.$tip) {
-        this.$tip = $(this.options.template)
-      }
-      return this.$tip
-    }
-
-  })
-
-
- /* POPOVER PLUGIN DEFINITION
-  * ======================= */
-
-  $.fn.popover = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('popover')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('popover', (data = new Popover(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.popover.Constructor = Popover
-
-  $.fn.popover.defaults = $.extend({} , $.fn.tooltip.defaults, {
-    placement: 'right'
-  , content: ''
-  , template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
-  })
-
-}(window.jQuery);/* =============================================================
- * bootstrap-scrollspy.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#scrollspy
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================== */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
-  /* SCROLLSPY CLASS DEFINITION
-   * ========================== */
-
-  function ScrollSpy( element, options) {
-    var process = $.proxy(this.process, this)
-      , $element = $(element).is('body') ? $(window) : $(element)
-      , href
-    this.options = $.extend({}, $.fn.scrollspy.defaults, options)
-    this.$scrollElement = $element.on('scroll.scroll.data-api', process)
-    this.selector = (this.options.target
-      || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-      || '') + ' .nav li > a'
-    this.$body = $('body')
-    this.refresh()
-    this.process()
-  }
-
-  ScrollSpy.prototype = {
-
-      constructor: ScrollSpy
-
-    , refresh: function () {
-        var self = this
-          , $targets
-
-        this.offsets = $([])
-        this.targets = $([])
-
-        $targets = this.$body
-          .find(this.selector)
-          .map(function () {
-            var $el = $(this)
-              , href = $el.data('target') || $el.attr('href')
-              , $href = /^#\w/.test(href) && $(href)
-            return ( $href
-              && href.length
-              && [[ $href.position().top, href ]] ) || null
-          })
-          .sort(function (a, b) { return a[0] - b[0] })
-          .each(function () {
-            self.offsets.push(this[0])
-            self.targets.push(this[1])
-          })
-      }
-
-    , process: function () {
-        var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
-          , scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
-          , maxScroll = scrollHeight - this.$scrollElement.height()
-          , offsets = this.offsets
-          , targets = this.targets
-          , activeTarget = this.activeTarget
-          , i
-
-        if (scrollTop >= maxScroll) {
-          return activeTarget != (i = targets.last()[0])
-            && this.activate ( i )
-        }
-
-        for (i = offsets.length; i--;) {
-          activeTarget != targets[i]
-            && scrollTop >= offsets[i]
-            && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
-            && this.activate( targets[i] )
-        }
-      }
-
-    , activate: function (target) {
-        var active
-          , selector
-
-        this.activeTarget = target
-
-        $(this.selector)
-          .parent('.active')
-          .removeClass('active')
-
-        selector = this.selector
-          + '[data-target="' + target + '"],'
-          + this.selector + '[href="' + target + '"]'
-
-        active = $(selector)
-          .parent('li')
-          .addClass('active')
-
-        if (active.parent('.dropdown-menu'))  {
-          active = active.closest('li.dropdown').addClass('active')
-        }
-
-        active.trigger('activate')
-      }
-
-  }
-
-
- /* SCROLLSPY PLUGIN DEFINITION
-  * =========================== */
-
-  $.fn.scrollspy = function ( option ) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('scrollspy')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('scrollspy', (data = new ScrollSpy(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.scrollspy.Constructor = ScrollSpy
-
-  $.fn.scrollspy.defaults = {
-    offset: 10
-  }
-
-
- /* SCROLLSPY DATA-API
-  * ================== */
-
-  $(function () {
-    $('[data-spy="scroll"]').each(function () {
-      var $spy = $(this)
-      $spy.scrollspy($spy.data())
-    })
-  })
-
-}(window.jQuery);/* ========================================================
- * bootstrap-tab.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#tabs
- * ========================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================== */
-
-
-!function ($) {
-
-  "use strict"; // jshint ;_;
-
-
- /* TAB CLASS DEFINITION
-  * ==================== */
-
-  var Tab = function ( element ) {
-    this.element = $(element)
-  }
-
-  Tab.prototype = {
-
-    constructor: Tab
-
-  , show: function () {
-      var $this = this.element
-        , $ul = $this.closest('ul:not(.dropdown-menu)')
-        , selector = $this.attr('data-target')
-        , previous
-        , $target
-        , e
-
-      if (!selector) {
-        selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
-      }
-
-      if ( $this.parent('li').hasClass('active') ) return
-
-      previous = $ul.find('.active a').last()[0]
-
-      e = $.Event('show', {
-        relatedTarget: previous
-      })
-
-      $this.trigger(e)
-
-      if (e.isDefaultPrevented()) return
-
-      $target = $(selector)
-
-      this.activate($this.parent('li'), $ul)
-      this.activate($target, $target.parent(), function () {
-        $this.trigger({
-          type: 'shown'
-        , relatedTarget: previous
-        })
-      })
-    }
-
-  , activate: function ( element, container, callback) {
-      var $active = container.find('> .active')
-        , transition = callback
-            && $.support.transition
-            && $active.hasClass('fade')
-
-      function next() {
-        $active
-          .removeClass('active')
-          .find('> .dropdown-menu > .active')
-          .removeClass('active')
-
-        element.addClass('active')
-
-        if (transition) {
-          element[0].offsetWidth // reflow for transition
-          element.addClass('in')
-        } else {
-          element.removeClass('fade')
-        }
-
-        if ( element.parent('.dropdown-menu') ) {
-          element.closest('li.dropdown').addClass('active')
-        }
-
-        callback && callback()
-      }
-
-      transition ?
-        $active.one($.support.transition.end, next) :
-        next()
-
-      $active.removeClass('in')
-    }
-  }
-
-
- /* TAB PLUGIN DEFINITION
-  * ===================== */
-
-  $.fn.tab = function ( option ) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('tab')
-      if (!data) $this.data('tab', (data = new Tab(this)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.tab.Constructor = Tab
-
-
- /* TAB DATA-API
-  * ============ */
-
-  $(function () {
-    $('body').on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
-  })
-
-}(window.jQuery);/* =============================================================
- * bootstrap-typeahead.js v2.0.4
- * http://twitter.github.com/bootstrap/javascript.html#typeahead
- * =============================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ============================================================ */
-
-
-!function($){
-
-  "use strict"; // jshint ;_;
-
-
- /* TYPEAHEAD PUBLIC CLASS DEFINITION
-  * ================================= */
-
-  var Typeahead = function (element, options) {
-    this.$element = $(element)
-    this.options = $.extend({}, $.fn.typeahead.defaults, options)
-    this.matcher = this.options.matcher || this.matcher
-    this.sorter = this.options.sorter || this.sorter
-    this.highlighter = this.options.highlighter || this.highlighter
-    this.updater = this.options.updater || this.updater
-    this.$menu = $(this.options.menu).appendTo('body')
-    this.source = this.options.source
-    this.shown = false
-    this.listen()
-  }
-
-  Typeahead.prototype = {
-
-    constructor: Typeahead
-
-  , select: function () {
-      var val = this.$menu.find('.active').attr('data-value')
-      this.$element
-        .val(this.updater(val))
-        .change()
-      return this.hide()
-    }
-
-  , updater: function (item) {
-      return item
-    }
-
-  , show: function () {
-      var pos = $.extend({}, this.$element.offset(), {
-        height: this.$element[0].offsetHeight
-      })
-
-      this.$menu.css({
-        top: pos.top + pos.height
-      , left: pos.left
-      })
-
-      this.$menu.show()
-      this.shown = true
-      return this
-    }
-
-  , hide: function () {
-      this.$menu.hide()
-      this.shown = false
-      return this
-    }
-
-  , lookup: function (event) {
-      var that = this
-        , items
-        , q
-
-      this.query = this.$element.val()
-
-      if (!this.query) {
-        return this.shown ? this.hide() : this
-      }
-
-      items = $.grep(this.source, function (item) {
-        return that.matcher(item)
-      })
-
-      items = this.sorter(items)
-
-      if (!items.length) {
-        return this.shown ? this.hide() : this
-      }
-
-      return this.render(items.slice(0, this.options.items)).show()
-    }
-
-  , matcher: function (item) {
-      return ~item.toLowerCase().indexOf(this.query.toLowerCase())
-    }
-
-  , sorter: function (items) {
-      var beginswith = []
-        , caseSensitive = []
-        , caseInsensitive = []
-        , item
-
-      while (item = items.shift()) {
-        if (!item.toLowerCase().indexOf(this.query.toLowerCase())) beginswith.push(item)
-        else if (~item.indexOf(this.query)) caseSensitive.push(item)
-        else caseInsensitive.push(item)
-      }
-
-      return beginswith.concat(caseSensitive, caseInsensitive)
-    }
-
-  , highlighter: function (item) {
-      var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&')
-      return item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
-        return '<strong>' + match + '</strong>'
-      })
-    }
-
-  , render: function (items) {
-      var that = this
-
-      items = $(items).map(function (i, item) {
-        i = $(that.options.item).attr('data-value', item)
-        i.find('a').html(that.highlighter(item))
-        return i[0]
-      })
-
-      items.first().addClass('active')
-      this.$menu.html(items)
-      return this
-    }
-
-  , next: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
-        , next = active.next()
-
-      if (!next.length) {
-        next = $(this.$menu.find('li')[0])
-      }
-
-      next.addClass('active')
-    }
-
-  , prev: function (event) {
-      var active = this.$menu.find('.active').removeClass('active')
-        , prev = active.prev()
-
-      if (!prev.length) {
-        prev = this.$menu.find('li').last()
-      }
-
-      prev.addClass('active')
-    }
-
-  , listen: function () {
-      this.$element
-        .on('blur',     $.proxy(this.blur, this))
-        .on('keypress', $.proxy(this.keypress, this))
-        .on('keyup',    $.proxy(this.keyup, this))
-
-      if ($.browser.webkit || $.browser.msie) {
-        this.$element.on('keydown', $.proxy(this.keypress, this))
-      }
-
-      this.$menu
-        .on('click', $.proxy(this.click, this))
-        .on('mouseenter', 'li', $.proxy(this.mouseenter, this))
-    }
-
-  , keyup: function (e) {
-      switch(e.keyCode) {
-        case 40: // down arrow
-        case 38: // up arrow
-          break
-
-        case 9: // tab
-        case 13: // enter
-          if (!this.shown) return
-          this.select()
-          break
-
-        case 27: // escape
-          if (!this.shown) return
-          this.hide()
-          break
-
-        default:
-          this.lookup()
-      }
-
-      e.stopPropagation()
-      e.preventDefault()
-  }
-
-  , keypress: function (e) {
-      if (!this.shown) return
-
-      switch(e.keyCode) {
-        case 9: // tab
-        case 13: // enter
-        case 27: // escape
-          e.preventDefault()
-          break
-
-        case 38: // up arrow
-          if (e.type != 'keydown') break
-          e.preventDefault()
-          this.prev()
-          break
-
-        case 40: // down arrow
-          if (e.type != 'keydown') break
-          e.preventDefault()
-          this.next()
-          break
-      }
-
-      e.stopPropagation()
-    }
-
-  , blur: function (e) {
-      var that = this
-      setTimeout(function () { that.hide() }, 150)
-    }
-
-  , click: function (e) {
-      e.stopPropagation()
-      e.preventDefault()
-      this.select()
-    }
-
-  , mouseenter: function (e) {
-      this.$menu.find('.active').removeClass('active')
-      $(e.currentTarget).addClass('active')
-    }
-
-  }
-
-
-  /* TYPEAHEAD PLUGIN DEFINITION
-   * =========================== */
-
-  $.fn.typeahead = function (option) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('typeahead')
-        , options = typeof option == 'object' && option
-      if (!data) $this.data('typeahead', (data = new Typeahead(this, options)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.typeahead.defaults = {
-    source: []
-  , items: 8
-  , menu: '<ul class="typeahead dropdown-menu"></ul>'
-  , item: '<li><a href="#"></a></li>'
-  }
-
-  $.fn.typeahead.Constructor = Typeahead
-
-
- /* TYPEAHEAD DATA-API
-  * ================== */
-
-  $(function () {
-    $('body').on('focus.typeahead.data-api', '[data-provide="typeahead"]', function (e) {
-      var $this = $(this)
-      if ($this.data('typeahead')) return
-      e.preventDefault()
-      $this.typeahead($this.data())
-    })
-  })
-
-}(window.jQuery);
+  ogedogedogedogedoge d o
+      gedogedog edog
+    e dogedoged oged
+    o gedog edog
+  e
+
+  dogedogedogedogedogedo g edoge
+
+
+ do gedog edogedog
+  e dogedogedogedo ge
+
+  dogedogedo ge d
+    ogedogedogedogedogedogedogedogedoged ogedogedogedogedogedoged ogedoged o g e d
+      oge doged o gedogedo gedo
+        g edogedo g edogedogedogedogedogedogedo ge doged o gedogedogedogedoged og edogedogedogedogedogedogedoged oged ogedoge dog edo
+        g edoged o gedogedogedogedogedog e dogedoge d ogedogedoged ogedogedogedoge dogedogedoged
+
+      ogedogedogedogedog
+      edogedogedogedogedoge
+    do
+  ge
+
+dogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedogedogedogedog edoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedog ed oge dogedoge dogedogedoge do gedog edoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedo gedo gedogedo gedo
+ g
+ e dogedoge doged oge dogedo gedogedo gedoged oge doge dogedogedog
+ e dog edo ged oge doge doge dogedo ge dogedogedo gedo ged ogedoged
+ o ged oge dogedo g edog ed oge dogedog ed
+ o
+ g edogedogedogedogedogedogedogedogedogedoged
+ o
+ g edoged ogedoged og edogedoged oge do gedoge do ge dogedoge dogedoge
+ d ogedogedoge doged oge dogedog ed ogedogedoge do ge dog edo gedoge
+ d ogedoge dogedogedo ge dogedogedo ge dog edoge dogedo gedoged og edogedog
+ e dog edo gedoged oge dog edogedog edogedog edogedoge dogedogedog edo
+ g edogedogedo gedog edo gedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedoged og
+
+
+edogedoge dog e
+
+  doge dogedoge do gedoge dog
+
+
+ ed ogedoge dogedo gedog edogedoged
+  o gedogedogedogedogedogedogedoged og
+
+  edo gedoged o gedogedo gedogedog edogedog e
+    dogedogedogedogedoge dogedoge dogedoge
+  d
+
+  ogedogedogedogedo g e
+
+    dogedogedoge dogedog
+
+  e doged ogedoged ogedog edogedog edogedog e
+      dog edogedo
+        g edogedog
+
+      edogedoge d oged
+      ogedogedogedo g edogedoged
+      ogedogedoged o gedogedogedogedogedogedo
+      gedogedogedo g edog
+
+      ed ogedogedogedogedogedo ge dogedoged o
+        gedoged  o gedogedogedogedogedo ge dogedog e dogedogedoge d ogedoge
+        dogedoge d ogedogedogedogedoged og edogedo g edogedogedog e dogedo
+        gedogedogedogedogedogedog edogedogedogedogedoged ogedogedogedogedoge dogedo
+        gedogedogedogedogedogedoge dogedogedogedogedogedo gedogedogedogedoged ogedog
+      e
+
+      dogedogedogedogedoged o
+        gedogedogedoge d ogedogedoged ogedogedogedo g edogedog edogedoge dogedoged og edo g
+        edogedogedogedo
+    g
+
+  e dogedogedog edogedog edogedoge d
+      ogedoge d ogedogedoged ogedogedogedogedogedogedo gedogedo gedogedogedogedogedog
+
+      ed ogedogedogedog ed ogedog edogedogedoge do gedogedog e
+        dogedogedoged o g
+          edoge dogedogedoged
+        o gedog edogedogedoge
+        d
+      o
+
+      gedoge dogedog
+    e
+
+  d ogedog edogedog edo g
+      edo gedo g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+
+      ed ogedogedogedogedoged og edogedogedogedogedogedoge dogedo gedogedoged
+
+      ogedogedogedogedogedogedog
+      edogedogedogedo g edog
+      edogedogedog e dogedogedogedogedoged o
+        ge dogedogedogedoge do gedog edogedogedo
+      ge dogedogedogedogedogedoge
+    d
+
+  o gedoge dogedoge dog e
+      dog edog e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+
+      do gedogedogedoge dogedogedogedogedogedogedo
+      ge dogedogedogedogedoge do gedogedogedogedogedogedog edoged ogedogedoge
+
+      dogedogedogedog e doged
+      ogedogedoged o gedogedogedogedogedog e
+        do gedogedogedogedo ge dogedo gedogedoged
+      og edogedogedogedogedogedog
+    e
+
+  d ogedo gedogedo ge d
+      oge doge
+        d ogedog
+        e dog
+        e dogedogedog
+        e dogedogedoge
+        d ogedogedo
+        g ed
+
+      og edogedogedogedoged og edogedogedoge d
+        oged o gedogedoge
+        dogedogedogedoged
+
+        og edogedogedogedogedogedog e
+          dogedogedogedogedoged
+        o
+
+        gedogedog e dogedo gedogedogedogedogedoge do gedogedoge d
+          ogedogedogedogedogedogedogedogedo gedogedo gedogedogedogedog e
+          dogedogedogedogedogedo
+
+        gedoge d ogedogedogedogedoged
+
+        oged
+          ogedogedo
+          gedoge doge do gedog ed ogedoged ogedoge do
+          gedogedogedogedo g edogedogedoge d ogedogedogedog
+
+        edo g edogedogedogedogedogedog
+
+        edogedogedo g edogedogedogedogedo
+        gedogedogedo g edogedogedogedogedog
+
+        edoged ogedoge d ogedogedogedogedo gedog e dogedogedo g
+          edog edogedoge
+            do g edoge dogedog e dogedogedog edoge dogedoge d ogedogedo g e d ogedogedoge d og
+            edoge
+          doge dogedo
+            ge d ogedo gedoged o gedogedogedog edoge dogedoge d ogedogedo g e d ogedogedoge d og
+            edoge
+          doge dogedog
+            ed o gedog edogedo g edogedoged o g e dogedogedoge d og edoge dogedoge d ogedogedoged
+            ogedo
+          gedo gedogedo
+            ge d ogedo gedoged o gedogedoge d o g edogedogedog e do gedog edogedog e dogedogedo
+            gedog
+        e
+
+        doge
+          dogedoge
+          dogedogedogedogedoge
+          dogedogedogedog
+      e
+    d
+
+  o gedoged ogedogedogedog e
+      do gedo gedoge dogedoged ogedo gedoged oged ogedog
+      edoged ogedog edog ed ogedoged
+        og e dogedogedogedo ged oge
+          do gedogedogedo gedogedoged o g e dog edo
+          ge dogedogedog ed o
+        g ed ogedogedogedogedogedogedogedogedogedog
+    e
+
+  d ogedogedoge dogedoge do g
+      edo gedo g edogedoged
+        o gedog e dogedogedogedog
+
+      edogedogedogedogedogedogedogedogedogedogedoged o gedoge d ogedogedogedog
+      edogedogedogedogedoged og edo gedoge doge dogedog
+    e
+
+  d ogedo gedogedo ge d
+      oge doge d oged
+        o gedo g edogedoged
+
+      ogedogedogedogedogedog
+
+      edogedog edogedogedogedogedoge d
+        oge dogedog e dogedogedogedogedog ed o
+          gedogedogedogedogedogedogedogedogedogedoged
+        og edog
+
+        edogedogedogedogedogedogedogedoged ogedoged og e
+          dogedogedogedogedoged
+          ogedogedogedo
+        ge
+      d
+
+      ogedogedogedogedoged og edogedogedogedogedogedoged o
+        gedogedogedogedogedog e
+        dogedogedoged
+    o
+
+  g edogedoge dogedoge do g
+      edo ge d ogedogedogedo
+      ge dogedogedogedoged og edogedogedogedogedogedogedogedogedoged og edogedoge d
+        ogedogedogedogedogedogedogedog edogedogedogedog ed ogedogedogedogedogedoge
+      d
+    o
+
+  g edogedogedo gedogedo ge d
+      ogedog edogedogedogedo
+    g
+
+  e dogedogedoge dogedoge dogedoge d
+      ogedog edogedogedog edogedo g edoge do gedog ed o gedogedogedogedogedogedo g
+        edoged ogedogedogedogedogedogedoged
+      o gedoged ogedogedogedogedogedogedogedo
+      ge
+    d
+
+  o gedogedog edogedog ed o
+      ged ogedo
+        g ed o gedogedogedog
+        e d o gedogedogedo
+
+      gedog e dogedogedogedogedogedogedogedo
+        ge dogedog edogedo ge dogedogedo g edogedogedogedogedo g  edogedog
+
+      edoged ogedo
+    g
+
+  e doge dogedoge do g
+      edoged ogedogedo g edogedoge do gedogedogedogedogedogedo
+    g
+
+  e dogedoged ogedoged og e
+      do gedogedogedogedogedogedogedoge d
+        ogedogedoge
+        dogedogedoged o gedo
+        gedogedogedo g edog
+      e
+    d
+
+  o gedoged ogedoged og e
+      dogedogedoge d oged
+    o
+
+  g edogedog edogedog ed o
+      gedogedogedo g edoge
+    d
+
+  o gedogedogedoge dogedoge do g
+      edogedogedog e dogedogedoged
+    o
+
+  g edogedo gedogedo ge d
+      ogedogedogedogedogedogedogedog e dogedo g edogedoge
+    d
+
+  o
+
+
+ ge dogedog edoged ogedogedog
+  e dogedogedogedogedogedoged og
+
+  edogedogedog e dogedoge d ogedog e d
+    ogedog edogedogedogedoged og e
+      dog edoge d ogedoge
+        d oged o gedogedogedogedogedog
+        e dogedog e dogedo gedoge do gedogedo ge dogedo
+      ge dogedog edogedogedogedogedoge doged o ged ogedogedogedo gedogedoge
+      do gedoged ogedog ed ogedogedo gedogedogedoge
+    do
+  g
+
+  edogedogedogedogedogedog e dogedog
+
+  edogedogedogedogedoge d o
+    gedogedoge doge
+  d ogedogedog edoge
+  d ogedogedo gedog
+  e dogedoged ogedo gedogedogedogedogedo gedogedogedogedogedogedogedogedo gedogedogedogedogedogedogedogedoged
+  o gedogedo gedoged
+  o gedoge do
+  g edoged o
+  g
+
+edogedogedogedoge
+do gedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedo gedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedog edog edogedog edog
+ e
+ d ogedoged ogedo ged ogedog edogedog edogedo ged oged ogedogedoge
+ d oge dog edo ged oged oged ogedog ed ogedogedog edog edo gedogedo
+ g edo ged ogedog e doge do ged ogedoge do
+ g
+ e dogedogedogedogedogedogedogedogedogedogedo
+ g
+ e dogedo gedogedo ge dogedogedo ged og edoged og ed ogedoged ogedoged
+ o gedogedoged ogedo ged ogedoge do gedogedoged og ed oge dog edoged
+ o gedoged ogedogedog ed ogedogedog ed oge doged ogedog edogedo ge dogedoge
+ d oge dog edogedo ged oge dogedoge dogedoge dogedoged ogedogedoge dog
+ e dogedogedog edoge dog edogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedogedog ed
+
+
+ogedogedo ged o
+
+  gedo gedogedo ge dogedo ged
+
+
+ og edogedo gedoge doged ogedogedog
+  e dogedogedogedogedogedogedogedog ed
+
+  oge dogedog e dogedoge d ogedoged ogedoge d o
+    gedogedogedogedogedo gedogedo gedogedo
+  g
+
+
+  ed ogedo gedoged ogedoge dogedogedogedogedoge
+     dogedogedogedogedogedogedogedogedogedogedo ge
+
+  dogedogedogedoged o gedogedogedo gedogedogedogedogedogedogedogedoged o
+
+    gedogedogedo gedoged
+
+  o gedogedoged ogedoged og e
+      dog edog e dogedogedo
+        g edoge d ogedogedogedoge
+        d ogedoge d ogedogedogedogedo
+
+      gedogedogedogedogedogedogedogedogedogedogedoge d ogedog e dogedogedogedo
+      gedogedogedogedogedogedoged o gedogedogedogedogedogedo g edoged o gedogedogedogedo
+
+      gedogedogedogedogedoge dog edoged oged ogedo gedo
+    g
+
+  e dogedogedog edogedog ed o
+      gedoge dogedogedogedog ed ogedogedogedogedo
+    g
+
+  e dogedogedog edogedog ed o
+      ged ogedoge
+        d og e dogedogedoged
+        o g e dogedogedoge
+
+      dogedog e dogedogedogedogedogedog
+        ed ogedoge dogedoged og edogedoged o gedogedogedogedogedog e  dogedogedo
+
+      gedoge dogedog
+    e
+
+  d oged ogedoged og e
+      do gedogedogedo g
+        edogedoge d ogedogedogedogedogedoged
+      o
+      gedoge dogedoged
+    o
+
+  ge
+
+
+ do gedoged ogedog edogedoged
+  o gedogedogedogedogedoged og
+
+  edogedogedog e dogedoge dogedoge d
+    ogedog edogedogedogedoged og e
+      dog edoge d ogedoge
+        d oged o gedogedogedogedogedog
+        e dogedog e dogedo gedoge do gedogedo ge dogedo
+      ge dogedog edogedogedogedogedoge doged o ged ogedogedogedo gedogedoge
+      do gedoged ogedog ed ogedogedo gedogedogedoge
+    do
+  g
+
+  edogedogedogedogedogedog e dogedog
+
+  edogedogedogedogedoge d ogedogedoge d ogedogedogedogedogedog e
+    dogedogedo gedoged
+  o gedogedo ge
+  d ogedogedo gedog edogedogedogedogedog edogedogedogedogedogedog edogedogedogedogedogedoge dogedogedogedogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedoged
+  og
+
+edogedogedogedogedo gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedogedogedo gedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedo gedo gedogedo gedo
+ g
+ e dogedoge doged oge dogedo gedogedo gedoged oge doge dogedogedog
+ e dog edo ged oge doge doge dogedo ge dogedogedo gedo ged ogedoged
+ o ged oge dogedo g edog ed oge dogedog ed
+ o
+ g edogedogedogedogedogedogedogedogedogedoged
+ o
+ g edoged ogedoged og edogedoged oge do gedoge do ge dogedoge dogedoge
+ d ogedogedoge doged oge dogedog ed ogedogedoge do ge dog edo gedoge
+ d ogedoge dogedogedo ge dogedogedo ge dog edoge dogedo gedoged og edogedog
+ e dog edo gedoged oge dog edogedog edogedog edogedoge dogedogedog edo
+ g edogedogedo gedog edo gedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged og
+
+
+edogedoge dog e
+
+  doge dogedoge do gedoge dog
+
+
+  ed ogedogedo gedog edogedoged
+   o gedogedogedogedogedogedoge do
+
+  gedogedo gedogedoge dogedoge dogedoge d
+    oge dogedog e dogedogedogedogedoged ogedo
+      g edogedog e dogedogedogedogedoged o gedogedog e dogedogedo
+      g edog
+    edogedogedog e dogedogedoge dogedogedogedogedogedoge dogedoge
+    dogedogedogedogedog e dogedogedogedogedogedogedogedogedoged ogedoged
+    ogedogedogedo g edogedogedogedogedog
+      ed ogedog e dogedogedogedogedogedoge do gedogedogedogedogedogedogedoge doge dogedog edo ged
+      og edo g e doge do g ed
+    ogedogedog e dogedoged
+    ogedogedogedog
+    edogedogedoged
+  o
+
+  gedogedogedogedoged o g
+
+      edogedogedog edogedoge
+
+    d ogedoged ogedoged og e
+        dog edog e doge
+          d ogedoged
+
+        ogedogedoged o gedog
+        edogedogedog e doged
+
+        ogedoged o gedogedoge
+          dogedogedogedogedoge
+          dogedogedoged og e
+            dog edo g edogedo
+              g edog e dogedogedogedogedo ge dogedogedogedoge
+              d ogedo g edogedogedogedoge do gedoged
+            ogedog e doged
+              og edogedogedo
+              ge do gedogedogedogedogedog edog ed o ge doge
+          do
+          gedogedogedoge dog ed o gedoge doge d oged og
+          edogedogedoged og e
+            dogedogedogedogedogedogedo
+            gedogedogedogedogedogedoge
+          do
+      g
+
+    e dogedoge dogedoge do g
+        edo gedogedog e dogedogedogedogedogedogedogedog e dogedogedogedogedog
+          e dogedogedoge d ogedogedogedogedogedogedogedogedoge do gedogedogedogedogedogedoge
+          d ogedogedo g edogedogedog e dogedogedogedogedogedogedoge
+          d ogedoge d ogedogedoged
+          o gedoged o gedogedogedo
+          g edogedogedog e dogedogedogedoged
+          o g
+
+        ed ogedogedog ed ogedogedog e
+          dogedo gedogedogedo ge do g edogedogedogedoged
+            og edogedogedoge d o g
+        e
+
+        dog ed o gedogedogedoged ogedo g
+          edogedogedog ed ogedogedog
+            ed ogedogedo ge dogedogedo
+            ge dogedogedog e do ge dogedoged og edogedoge d oge
+            do gedogedogedoge dogedogedo g
+        e
+      d
+
+    o gedogedog edogedog edogedog e
+        dog edoged
+          o gedogedo
+
+        gedogedogedogedog e dogedo
+
+        gedogedogedogedo
+          gedogedogedogedoge
+          dogedogedogedogedogedo
+
+        gedogedo g edogedogedoge
+          d ogedogedogedoged o gedoge d ogedo
+          g edogedogedoge d ogedogedo g edoged o gedo
+
+        gedoge d ogedogedoge
+          dogedogedoged
+          ogedogedogedogedoge
+
+        do gedogedogedogedogedogedogedogedog  e
+          dogedo g edogedogedogedogedogedogedogedogedogedogedogedog
+        e
+
+        dogedogedogedogedogedogedo
+      g
+
+  e
+
+
+ do gedogedog edoged ogedogedog
+  e dogedogedogedogedogedogedog ed
+
+  ogedogedogedog e dogedoge d ogedog e d
+    ogedog edogedogedogedoged og e
+      dog edoge d ogedoge
+        d oged o gedogedogedogedogedoged
+        o gedoged o gedoge dogedo ge dogedoge do gedoge
+      do gedoged ogedogedogedogedogedoge doged o ged ogedogedogedoge dogedogedo
+      ge dogedog edoged og edogedoge dogedogedogedo
+    ge
+  d
+
+  ogedogedogedogedogedogedog e dogedoged
+
+  ogedogedogedogedogedoge d o
+    gedoged og
+  e
+
+
+ do gedogedog edogedog
+  e dogedogedogedogedo ge
+
+  dogedogedo ge d
+    ogedogedogedogedogedogedogedogedogedog ed o
+      ged oged o gedoged
+      ogedogedogedogedogedogedoge
+    do
+  ge
+
+dogedogedogedogedog edogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedoge dogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedog
+ e dogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedo gedo gedogedo gedo
+ g
+ e dogedoge doged oge dogedo gedogedo gedoged oge doge dogedogedog
+ e dog edo ged oge doge doge dogedo ge dogedogedo gedo ged ogedoged
+ o ged oge dogedo g edog ed oge dogedog ed
+ o
+ g edogedogedogedogedogedogedogedogedogedoged
+ o
+ g edoged ogedoged og edogedoged oge do gedoge do ge dogedoge dogedoge
+ d ogedogedoge doged oge dogedog ed ogedogedoge do ge dog edo gedoge
+ d ogedoge dogedogedo ge dogedogedo ge dog edoge dogedo gedoged og edogedog
+ e dog edo gedoged oge dog edogedog edogedog edogedoge dogedogedog edo
+ g edogedogedo gedog edo gedogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedog ed
+
+
+ogedogedo ged o
+
+  gedo gedogedo ge dogedo ged
+
+
+ og edo gedog edogedoged
+  o gedogedogedogedogedo ge
+
+  dog edo g edogedog e dogedog e d
+    ogedogedoged o gedogedoge
+  d
+
+  ogedogedogedo g e
+
+    dogedogedoge dog
+
+  e doged ogedoged og e
+      dog edoge d ogedogedoged
+        o ged o gedogedogedogedogedogedogedogedogedoged
+        o gedogedo g edogedogedogedogedogedoge
+        d ogedoged
+        o gedoged
+        o g
+
+      ed ogedogedoge d
+        ogedoged o gedogedogedogedoge
+        dogedoge d ogedoged og edogedogedogedogedogedogedogedoged oge dogedog edo ged
+      o
+
+      ge d ogedogedogedogedogedogedogedogedogedo g edoged
+
+      ogedoged o gedogedogedogedog edogedogedoge
+
+      d o gedogedogedoged o
+        gedogedogedoge dogedoge
+      do
+
+      gedogedogedogedo
+
+      ge dogedogedogedogedogedoge dogedo
+
+      gedoged o gedogedoged
+
+      ogedogedogedogedogedogedogedogedo gedo
+      gedogedogedogedogedoge dogedogedogedoged ogedoged og e
+        dogedogedogedog
+          edoge dogedog
+        e dogedogedogedo gedogedo
+        ge
+      do
+    g
+
+  e dogedoged ogedoged o gedogedo gedogedoge dogedoged o
+      ged ogedoge d ogedogedogedogedo gedogedog
+        e dogedogedo g edogedog
+            ed ogedogedogedogedoged
+            og edogedogedogedogedogedog
+
+      edogedog edoged o
+        gedoged
+          ogedogedogedogedogedog
+          edogedog edogedogedoged o gedogedog
+          edogedogedogedogedoged
+
+        ogedogedogedogedogedogedog
+
+        ed ogedogedoged o
+          gedogedogedogedogedoge do gedoge dog edogedoged
+          ogedogedogedogedogedog
+        e doge d
+          ogedogedogedogedogedogedoge
+        d
+
+        og e dogedogedogedogedogedogedogedoge d o
+          gedogedogedogedogedogedogedogedogedogedogedogedog
+        e
+
+        dogedoge do gedogedoge
+      d
+
+      ogedogedog e
+        dogedogedogedogedogedogedogedogedoged ogedo g
+        edoged
+
+      ogedogedogedogedogedogedo
+    g
+  e
+
+
+ do ged ogedog edogedoged
+  o gedogedogedogedogedog ed
+
+  ogedoged o gedogedo g edoged o g
+    edoged ogedogedogedogedog ed o
+      ged ogedo g edogedo
+        g edog e dogedogedogedoged
+      og edogedo gedogedogedogedog edoge d oge dogedogedog
+      ed ogedoge dogedo ge dogedoged ogedogedogedog
+    ed
+  o
+
+  gedogedogedogedogedo g edo
+
+
+ ge dog edogedog
+  e dogedogedoge do
+
+  gedogedoge do g
+    edogedogedogedogedogedogedogedoged ogedogedogedogedogedo gedogedogedogedogedoge dogedoge dog e
+      dogedogedogedogedo
+      gedogedogedogedoged
+    og
+  ed
+
+ogedogedogedogedoge dogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+ o gedogedogedogedogedoge dogedo
+ g edogedogedogedogedogedogedogedogedogedogedogedogedogedogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo
+ g edogedoge doge dogedoge doge
+ d
+ o gedogedo gedog edo gedoge dogedoge dogedog edo gedo gedogedoged
+ o ged oge dog edo gedo gedo gedoge do gedogedoge doge dog edogedog
+ e dog edo gedoge d oged og edo gedoged og
+ e
+ d ogedogedogedogedogedogedogedogedogedogedog
+ e
+ d ogedog edogedog ed ogedogedog edo ge dogedo ge do gedogedo gedogedo
+ g edogedogedo gedog edo gedoged og edogedogedo ge do ged oge dogedo
+ g edogedo gedogedoge do gedogedoge do ged ogedo gedoge dogedog ed ogedoged
+ o ged oge dogedog edo ged ogedoged ogedoged ogedogedo gedogedoged oge
+ d ogedogedoge doged oge dogedoge
+ d ogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged og
+
+
+edogedogedoge
+
+  doge dogedoge do gedoge dog
+
+
+ ed ogedogedo gedoge doged ogedogedog
+  e dogedogedogedogedogedogedogedoged og
+
+  edo gedogedog e dogedoge dogedoged ogedoged o
+    gedogedogedog e dogedogedo
+    gedogedogedo g edogedogedog edogedogedogedogedogedog edogedog
+    edogedogedog e dogedogedogedogedoge do gedogedogedo
+    gedogedoged o gedogedogedogedoged og edogedogedo
+    gedogedogedogedo g edogedogedogedogedogedog ed ogedogedogedoged
+    ogedogedoged o gedogedogedogedogedo ge dogedogedoge
+    dogedogedo g edogedogedogedogedogedogedogedogedoge
+    dogedogedog e dogedogedogedogedog
+    edogedoged o gedog
+    edogedogedoge
+  d
+
+  ogedogedogedogedoge d o
+
+    gedogedogedo gedogedog
+
+  e dogedog edogedog ed o
+      ged oge d ogedogedogedogedogedogedogedogedogedogedogedo
+      gedogedogedog
+        edogedogedogedogedogedo
+        gedogedog
+      edoged ogedogedoge
+    d
+
+  o gedogedo gedogedo gedoge d
+      ogedog edog
+    e
+
+  d ogedo gedogedo ge d
+      oge dog e dogedogedoge dogedogedogedogedogedog e
+        dogedog edogedogedogedogedogedogedoge
+      do
+
+      gedogedogedogedo
+        gedo gedoged o gedogedoge
+      d ogedo gedogedo
+      ge
+
+      dogedogedogedoged
+      ogedogedog e doge
+      dogedo gedo
+    g
+
+  e doged ogedoged og e
+      dogedogedogedoged
+      ogedogedog e doged
+      ogedog edog
+    e
+
+  d ogedoge dogedoge dogedog e
+      dog edog e doge
+        d ogedo
+        g e
+
+      dogedogedo g edogedogedogedogedo
+
+      ge dogedogedoged o
+        gedoge dogedogedo g edogedogedo g edog
+      e
+
+      doged o gedogedogedogedoged ogedoged ogedog e
+        dogedo gedogedogedogedoge
+      do
+
+      gedog e dogedogedogedogedo
+
+      ge dogedogedogedog e
+        dogedo gedogedoge d ogedogedoge d oged
+      o
+
+      gedoge dogedogedogedogedogedogedo gedogedogedogedogedogedoged
+    o
+
+  g edogedog edogedog edoged o
+      gedoge dogedogedogedogedogedogedogedogedogedogedogedogedoged
+    o
+
+  g edogedo gedogedo gedoged o
+      ged ogedogedog e do
+        g edogedogedoge d og
+        e dogedogedogedog e do
+        g edog
+
+      edoge doged o gedogedogedoge d
+        og edogedogedogedogedogedogedogedogedogedogedogedogedogedo gedogedogedogedogedog
+        edog ed ogedogedogedogedogedogedoge dogedogedogedogedogedoge
+        doge dogedogedogedogedogedogedo
+      g
+
+      edoged ogedogedogedogedogedogedogedoged ogedogedogedoged
+    o
+
+  g edogedogedog edogedog edoged o
+      ged ogedo g edogedogedogedogedogedogedogedogedogedogedogedoge dogedog
+      edoged ogedogedogedoged ogedogedog e doged o gedo gedoge dogedoge doge dogedo g
+        edoged ogedogedog e doged o gedogedoged
+      og
+    e
+
+  d ogedoge dogedoge dogedog e
+      dog edog e doge
+
+      doged o gedogedogedogedogedog edo gedog e
+        d o gedogedogedogedogedogedogedogedogedoged ogedo
+        gedogedogedogedogedogedogedogedogedogedo
+        gedoge doge
+      do
+
+      gedogedogedogedogedogedogedogedo
+      gedogedogedogedogedoge
+      dogedo gedo
+    g
+
+  e doged ogedoged ogedoge d
+      oge dogedo g edogedogedogedogedogedogedogedogedogedogedogedog
+        e doge d ogedogedogedo
+
+      ge dogedogedogedo g
+        edog e dogedogedogedogedogedogedog
+      e
+
+      dogedogedogedogedogedog
+    e
+
+  d ogedo gedogedo gedoged o
+      ged ogedog e dogedogedogedogedogedogedogedogedogedogedogedoge
+        d oged o gedogedogedog
+
+      ed ogedogedogedog e
+        doge d ogedogedogedogedogedogedoged
+      o
+
+      gedogedogedogedogedoged
+    o
+
+  g edogedo gedogedo ge d
+      ogedogedogedo
+        gedogedoged     ogedogedogedogedog edoged
+        ogedogedogedoge dogedogedogedogedogedo gedoge
+        dogedogedoge    dogedogedogedogedog edoged
+
+      og edogedogedogedoge do gedogedogedoged o
+        gedogedogedogedogedogedoged ogedogedogedogedogedog edoged
+      o
+
+      gedogedoge
+        dogedogedoge dogedogedogedogedog edoged
+        ogedogedogedogedo gedog edogedogedogedogedogedog edoged
+    o
+
+  g edoged ogedoged oge d
+      ogedogedogedogedo g
+        edog edo ge doge doged
+        oged oge do ge doged
+          ogedo
+
+        gedo ge do ged
+        oged oge do gedog
+          ed ogedogedogedo gedoge
+          dogedogedoged
+          ogedo
+
+        gedo ged og edoged
+          og edogedogedoge dogedo
+          gedogedoged
+          ogedo
+
+        gedogedo
+          gedogedogedog
+      e
+
+      dogedogedogedogedog
+      edogedogedogedoged
+  o
+
+  g edogedoge dogedoge dog e
+      do gedogedogedog edoged
+
+      ogedogedogedogedo g
+        edog ed og edo
+        gedo ged og edoge
+        doge dog ed ogedog
+          edogedogedogedoged
+          ogedo
+
+        gedo ged og ed ogedo
+          ge dogedog ed ogedogedog edoge
+          dogedogedogedogedo
+          gedogedoged
+          ogedo
+
+        gedo ged og edog edoge
+          do gedoged og edogedoged ogedo
+          gedogedogedogedoge
+          dogedogedog
+          edoge
+      d
+
+      ogedogedogedogedoge
+    d
+
+  o gedog edogedog edo g
+      edo gedo g edog
+      edogedogedogedogedo ge d ogedogedoge do gedo
+    g
+
+  e dogedo gedogedo ged o
+      gedogedogedogedoged
+      ogedogedogedogedog
+      edogedogedoge
+    d
+
+  o gedogedoged ogedoged oge d
+      ogedogedogedogedogedogedogedogedogedogedogedoged
+      ogedogedogedogedogedogedogedogedogedo
+    g
+
+  e
+
+
+  do gedogedog edoged ogedogedog
+   e dogedogedogedogedogedogedog ed
+
+  ogedogedogedog e dogedoge dogedoge d
+    ogedog edogedogedogedoged og e
+      dog edoge d ogedoge
+        d oged o gedogedogedogedogedoged
+        o gedoged o gedoge dogedo ge dogedoge do gedoge
+      do gedoged ogedogedogedogedogedoge doged o ged ogedogedogedoge dogedogedo
+      ge dogedog edoged og edogedoge dogedogedogedo
+    ge
+  d
+
+  ogedogedogedogedogedoge d o
+    gedoged og
+  e dogedo g
+  e doged oged ogedogedogedoged ogedogedogedogedogedo
+  g edoge dogedog edogedogedogedogedo
+  g
+
+  edogedogedogedogedogedoged o gedogedog
+
+
+ ed ogedogedo gedogedo
+  g edogedogedogedoged og
+
+  edogedoged og e
+    dogedogedogedogedogedogedogedogedogedoge dogedogedogedogedogedogedoged ogedoged oge d
+      oge doged o gedoged
+      og edogedogedogedogedogedoge dogedo
+      gedogedogedogedoge
+      dogedogedogedogedogedogedoged
+    og
+  ed
+
+ogedogedogedogedo

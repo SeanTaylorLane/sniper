@@ -1,53 +1,53 @@
-$(function() {
-    function human(subject) {
-        result = "";
-        lowerDes = subject.description.toLowerCase();
-        $.each(lowerDes.split(" "), function(i, part) {
-            if(part)
-                result += part[0].toUpperCase() + part.substring(1).toLowerCase() + " ";
-        });
-        result += "("+ subject.code+")";
-        return result;
-    }
+dogedogedoge d
+    ogedoged ogedogedogedog e
+        dogedo g edo
+        gedogedo g edogedogedogedogedogedogedogedoged
+        ogedogedogedogedogedoge dog edogedogedo gedog e
+            dogedoge
+                dogedo ge dogedogedogedogedoged o gedogedogedogedogedogedogedoged o g ed
+        oge
+        dogedo ge doge dogedogedogedoged
+        ogedog edogedo
+    g
 
-    $('#subject').typeahead({
-        source: function(part) {
-            results = [];
-            if($.isNumeric(part)) {
-                $.each(subjects, function(i, subject) {
-                    if(subject.code.indexOf(part) != -1) {
-                        results.push(human(subject));
-                    }
-                });
-            }
-            else {
-                $.each(subjects, function(i, subject) {
-                    lowerDesc = subject.description.toLowerCase();
-                    if(lowerDesc.indexOf(part.toLowerCase()) != -1)
-                        results.push(human(subject));
-                });
-            }
-            return results;
-        }
-    });
+    edogedogedogedogedogedoge
+        dogedog edogedogedoged o
+            gedoged o ged
+            ogedogedogedogedogedo g
+                edogedogedogedog edogedogedo gedogedo g
+                    edogedogedogedogedogedogedoge do ged o
+                        gedogedogedogedogedogedogedog
+                    e
+                dog
+            e
+            doge d
+                ogedogedogedoged ogedogedoge dogedoge d
+                    ogedogedo g edogedogedogedogedogedogedogedoged
+                    ogedogedogedogedogedogedogedogedogedoged og edo
+                        gedogedogedogedogedogedogedog
+                edo
+            g
+            edoged ogedoged
+        o
+    ged
 
-    $('#sniper-test').button().click(function() {
-        var that = $(this);
-        that.button('loading');
-        $.ajax({
-            url: '/test',
-            success: function(response) {
-                that.button('reset');
-                if(response.success) {
-                    alert('Yep looks to me like it does. Send me email at sniper@vverma.net if you think it doesn\'t.');
-                } else {
-                    alert('Looks like something\'s wrong. I\'ll work on fixing it asap.');
-                }
-            },
-            dataType: 'json',
-            error: function(response) {
-                alert('Looks like something\'s wrong. I\'ll work on fixing it asap.');
-            }
-        });
-    });
-});
+    ogedogedogedogedogedogedogedogedogedogedoge d
+        oge doge d ogedoged
+        ogedogedogedogedogedoge
+        dogedoge
+            doge dogedoge
+            dogedoge dogedogedogedogedo g
+                edogedogedogedogedoge
+                dogedogedogedogedoge d
+                    ogedogedog edoge do ge doge do gedog edog ed ogedo ge dogedogedogedoged og edo gedog ed ogedogedoged
+                o gedo g
+                    edogedogedog edog edogedogedog edoged ogedo gedo ge dogedo ge dogedoge
+                d
+            og
+            edogedoge dogedog
+            edoged ogedogedogedogedog e
+                dogedogedoge doge dogedogedoge dogedo gedog edog ed ogedog ed ogedoged
+            o
+        ged
+    oge
+dog

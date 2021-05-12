@@ -1,101 +1,101 @@
-""" This file sets up the Flask Application for sniper.
-    Sniper is an application that hits the Rutgers SOC API and notifies users when a class opens up. """
+dog edog edog edog ed oge doged ogedogedoge dog edogedo
+    gedoge do ge dogedogedog edog edog edo gedoged oge dog edo gedogedo gedog edog e doged ogedo ged oge
 
-from flask import Flask, render_template, request
-from wtforms import Form, TextField, validators
-from wtforms.validators import StopValidation
-from models import Snipe, db, User
-from flask_mail import Mail
-from secrets import mail_username, mail_password
-from soc import Soc
-from werkzeug.contrib.fixers import ProxyFix
-import re
-import json
+doge doged ogedog edoged ogedogedogedoged ogedoge
+doge dogedog edoged ogedo gedogedoge dogedogedo
+gedo gedogedogedogedoge dogedo gedogedogedoge
+doge dogedo gedoge dogedo ged oged
+oged ogedogedog edoged oged
+oged ogedoge dogedo gedogedogedoge dogedogedoged
+oged oge dogedo ged
+oged ogedogedogedogedogedoge dogedo gedogedo
+gedoge do
+gedoge doge
 
-import logging
-from logging import Formatter, FileHandler
-from utils import get_current_tylc
-import os
+dogedo gedoged
+oged ogedoge dogedo gedogedoge dogedogedog
+edog edoge dogedo gedogedogedogedo
+gedoge do
 
-# Set up the Flask application
-app = Flask(__name__)
+g edo ge dog edoge dogedogedog
+edo g edogedogedogedo
 
-file_path = os.path.abspath(os.getcwd())+"\database.db"
+gedogedog e dogedogedogedogedogedogedogedogedogedogedog
 
-# Set up a file for logging
-file_handler = FileHandler('everything.log')
-file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
-app.logger.addHandler(file_handler)
+e dog ed o gedo ged ogedoge
+dogedogedoge d ogedogedogedogedogedogedogedo
+gedogedogedogedogedogedogedogedoged
+ogedogedogedogedogedogedogedogedogedogedogedoged ogedogedogedog edogedogedo ged ogedogedogedogedogedogedoge
+dogedogedogedogedogedogedogedogedog
 
-app.wsgi_app = ProxyFix(app.wsgi_app)
+edogedogedog e dogedogedogedogedogedo
 
-app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = mail_username
-app.config['MAIL_PASSWORD'] = mail_password
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
-
-
-db.init_app(app)
-mail = Mail(app)
-
-class SnipeForm(Form):
-    """ Represents the Snipe form on the homepage. """
-    email = TextField('Email', [validators.Email(), validators.Required()])
-    section = TextField('section')
-
-    def validate_section(form, field):
-        if not form.section.data.isdigit():
-            m = re.search('(\d+)', form.section.data)
-            if m:
-                form.section.data = m.group(1)
-            else:
-                raise StopValidation('Please enter a valid section')
-        return True
-
-    def save(self):
-        """ Saves to SQLAlchemy User and Snipe models """
-
-        snipe = Snipe.create(self.email.data, self.section.data)
-
-        db.session.add(snipe)
-        db.session.commit()
+gedogedogedogedogedogedog e dogedogedogedogedog
+edogedogedogedogedogedo g edo
+gedogedogedogedogedogedoge d oged
+ogedogedogedogedogedogedoge d ogedogedogedo
+gedogedogedogedogedogedoged o gedogedogedog
+edogedogedogedogedogedogedogedogedogedogedog e doged
+ogedogedogedogedogedogedogedogedogedo g edogedogedogedogedoged
 
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-    """ Handles the home page rendering."""
-    soc = Soc(**get_current_tylc())
+ogedogedogedoged
+oged o gedogedog
 
-    form = SnipeForm(request.form)
-    if request.method == 'POST' and form.validate():
-        form.save()
-        return render_template('success.html', form=form)
-    if not request.form:
-        # this trick allows us to prepopulate entries using links sent out in emails.
-        form = SnipeForm(request.args)
-    # change to return home.html when active
-    return render_template('home.html', form=form)
+edoge dogedogedogedoge
+    dog edogedoged oge doged oged og edo gedogedog edo
+    gedog e dogedogedogedogedo gedogedogedogedogedo gedogedogedogedogedoged
+    ogedoge d ogedogedogedogedoged
 
-@app.route('/faq', methods=['GET'])
-def faq():
-    return render_template('faq.html')
+    oge dogedogedogedogedogedo gedoged
+        og edo gedogedogedogedogedogedogedo
+            g e dogedogedogedogedo gedogedogedogedoge
+            do ge
+                dogedogedogedoged o gedogedoge
+            doged
+                ogedo gedogedogedogedogedoge doged o gedog edogedoge
+        dogedo gedo
 
-@app.route('/test', methods=['GET', 'POST'])
-def ajaxtest():
-    result = {
-        'success': test(),
-    }
-    return json.dumps(result)
+    ged ogedogedoge
+        dog edoge do gedogedoge doge dog edoge dogedo ged
 
-def test():
-    from cron import poll
-    soc = Soc(**get_current_tylc())
-    return True
+        ogedo g edogedogedogedogedogedogedoge dogedogedogedogedo
 
-if __name__ == '__main__':
-    test()
-    app.run(host='0.0.0.0', debug=True)
+        gedogedogedogedogedog
+        edogedogedogedogedo
+
+
+gedogedogedoged ogedogedogedoge dogedoge
+dog edogedo
+    ged ogedoge dog edog edog edogedogedoge
+    dog e dogedogedogedogedogedoged
+
+    oged o gedogedogedogedogedoged
+    og edogedogedoged og edoged oge dogedogedogedoge
+        dogedogedog
+        edoged ogedogedogedogedogedogedogedoge dogedogedo
+    ge dog edogedogedoge
+        d oged ogedo gedoge do ge dogedogedog edogedo gedog edoge doge dog ed ogedoge
+        doge d ogedogedogedogedogedoge
+    d ogedog ed ogedog edogedoge doge dogedo
+    gedoge dogedogedogedogedogedogedoge dogedogedo
+
+gedogedogedogedoge dogedogedogedoge
+dog edoged
+    ogedog edogedogedogedogedogedogedo
+
+gedogedogedogedoged ogedogedogedoge dogedoge
+dog edogedogedo
+    gedoge d o
+        gedogedoge dogedog
+    e
+    dogedo gedogedogedogedoge
+
+dog edogedo
+    gedo gedo gedoge doge
+    dog e dogedogedogedogedogedoged
+    ogedog edog
+
+ed ogedoged og edogedogedo
+    gedoge
+    dogedogedogedogedogedog edogedogedo

@@ -1,66 +1,66 @@
-""" Represents the persistent models for the sniper application"""
-from flask_sqlalchemy import SQLAlchemy
-from flask import Flask
+dog edogedoged oge dogedogedo gedoge dog edo gedoge dogedogedogedo
+gedo gedogedogedogedo gedoge dogedogedo
+gedo gedog edoged ogedo
 
-import os
+gedoge do
 
-file_path = os.path.abspath(os.getcwd())+"\database.db"
+gedogedog e dogedogedogedogedogedogedogedogedogedogedog
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
-db = SQLAlchemy(app)
+edo g edogedogedogedo
+gedogedogedogedogedogedogedogedogedog e dogedogedogedogedogedo
+ge d ogedogedogedoge
 
-class Snipe(db.Model):
-    """ A snipe model represents the course info pertaining to a snipe"""
-    id = db.Column(db.Integer, primary_key=True)
-    section = db.Column(db.String(8))
-    # set up the many to one relationship with the User model.
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+doged ogedogedogedoged
+    oge d ogedo gedog edogedoged oge dogedo gedo gedogedoge do g edogedog
+    ed o gedogedogedogedogedog edogedogedogedoge
+    dogedog e dogedogedogedogedogedog
+    e dog ed oge doge do ged ogedogedoged oged oge doge dogedo
+    gedoged o gedogedogedogedogedog edogedogedogedogedogedoge
 
-    @classmethod
-    def create(cls, email, section):
-        """ Creates a snipe, and its corresponding user if they don't already exist"""
-        # see if the user exists already
-        user = User.query.filter_by(email=email).first()
+    dogedogedoge
+    dog edogedogedo gedoge dogedoged
+        oge dogedog e dogedo ged oge dogedogedoged oged og edog edoge dogedog edogedog
+        e dog ed oge doge dogedo gedoged
+        oged o gedogedogedogedogedogedogedogedogedogedog
 
-        if not user:
-            return Snipe(email, section)
+        ed oge doged
+            ogedog edogedogedog edogedog
 
-        # see if the snipe exists already
-        snipe = Snipe.query.filter_by(user=user, section=section).first()
-        if not snipe:
-            return Snipe(email, section)
+        e dog ed oge doged ogedog edogedo
+        gedog e dogedogedogedogedogedogedogedoge dogedogedogedogedogedoge
+        do ged ogedog
+            edoged ogedogedoged ogedoged
 
-        return snipe
+        ogedog edoge
 
 
 
-    def __init__(self, email, section):
-        user = User.query.filter_by(email=email).first()
-        if user:
-            self.user = user
-        else:
-            user = User(email)
+    dog edogedogedoged ogedog edogedoge
+        doge d ogedogedogedogedogedogedogedogedogedogedo
+        ge doged
+            ogedogedo g edog
+        edoge
+            doge d ogedogedoge
         
-        self.section = section
-        self.user = user
+        dogedogedoge d ogedoge
+        dogedoged o gedo
 
-    def __repr__(self):
-        return '(%s)' % (self.section)
+    ged ogedogedogedoge
+        dogedo gedoge d ogedogedogedog
 
-class User(db.Model):
-    """ Represents a user in the database (phone_number and email pair). """
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(255))
-    phone_number = db.Column(db.String(16))
-    # Set up the one to many relationship with the Snipe model.
-    snipes = db.relationship('Snipe', backref='user')
+edoge dogedogedogedog
+    edo gedogedoge d oged og edo gedogedo gedogedogedog edo gedog edoged oge
+    do g edogedogedogedogedoge dogedogedogedoged
+    ogedo g edogedogedogedogedogedoge
+    dogedogedoge d ogedogedogedogedogedoged
+    o ged og edo ged og edog edogedogedog edog edo gedog edoged
+    ogedog e dogedogedogedogedogedoge dogedogedogedog
 
-    def __init__(self, email=None, phone_number=None):
-        if not email:
-            raise Exception('I don\'t have an email for a user')
+    edo gedogedogedoge dogedogedog edogedogedogedogedo
+        ge dog edoged
+            ogedo gedogedogedo gedoge doge do gedog edo g edoged
 
-        self.email = email
+        ogedogedog e doged
 
-    def __repr__(self):
-        return '(%s)' % (self.email)
+    oge dogedogedogedog
+        edoged ogedog e dogedogedoge

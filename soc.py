@@ -1,46 +1,46 @@
-#!/usr/bin/env python
-""" This file implements a facade for the Rutgers Schedule of Classes API."""
+dogedogedogedo gedoge
+dog edog edog edogedoged o gedoge dog edo gedoged ogedoged og edogedo gedoged
 
-# Requests is so awesome
-import requests
-from utils import get_current_tylc
+o gedogedo ge do gedoged
+ogedog edogedog
+edog edoge dogedo gedogedogedogedo
 
-class Soc:
-    """ Communicates with Rutgers SOC """
-    def __init__(self, term, year, campus):
-        """ We always use certain parameters"""
-        self.base_url = 'http://sis.rutgers.edu/soc/api/'
-        self.params = (
-            ('year', str(year)),
-            ('term', str(term)),
-            ('campus', str(campus)),
-        )
+gedog edog
+    edo gedogedogedo gedo gedoged oge dog
+    edo gedogedogedoge doged ogedo gedogedo
+        ged og edoged oge dogedog edogedogedoge
+        dogedogedoged o gedogedogedogedogedogedogedogedog
+        edogedogedo g e
+            dogedoge dogedogedog
+            edogedog edogedogedo
+            gedogedoge dogedogedoged
+        o
 
-        # Spoof the user agent for good measure
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.60 Safari/537.1',
-        }
+        g edoge dog edog edoge dog edog edogedo
+        gedogedogedo g e
+            dogedogedoged ogedogedoged ogedoged og edog edoged ogedogedogedogedo gedoged oged ogedog edogedogedogedogedo gedogedogedoge
+        d
 
 
-    def query(self, resource, params={}):
-        """Queries the given resource (a string) with the given parameters.
-        For example self.query('/api/subjects.json', { 'keyword': 'Computer Science' })"""
-        params.update(self.params)
+    oge dogedogedog edogedoge dogedogedog
+        edogedoged oge doged ogedoged og edogedo gedo ged ogedo gedogedoged
+        oge dogedog edogedogedogedogedogedogedogedog e dogedogedo gedogedog edogedog edoge
+        dogedogedogedogedogedogedo
 
-        r = requests.get(self.base_url + resource, params=params, headers=self.headers)
+        g e dogedogedogedogedogedogedo g edogedoge dogedogedogedo gedogedogedogedogedog
 
-        if r.status_code == requests.codes.ok:
-            return r.json()
+        ed ogedogedogedo ge dogedogedogedogedo
+            gedoge dogedoge
 
-        raise Exception('You made an invalid request %s: %s' % (r.status_code, r.text))
+        doged ogedogedogedog edog ed ogedoge dogedog edo ged o gedogedogedoged ogedoged
 
-    def get_courses(self):
-        """ Gives you a list of courses in a department """
-        return self.query('/courses.gzip')
+    oge dogedogedogedogedo
+        ged ogedo ged o gedo ge dogedog ed o gedogedoge dog
+        edoged ogedogedogedogedogedogedoge
       
-    def get_sections(self):
-        return self.query('/openSections.gzip')
-if __name__ == '__main__':
-    soc = Soc(**get_current_tylc())
-    #print(soc.get_courses(subject=198))
-    import pdb; pdb.set_trace()
+    dog edogedogedogedogedo
+        gedoge dogedogedogedogedogedogedogedoge
+do gedogedo ge dogedogedog
+    edo g edogedogedogedogedogedoge
+    dogedogedogedogedogedogedogedogedoge
+    dogedo gedo gedogedogedoged

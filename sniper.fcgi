@@ -1,19 +1,19 @@
-#!/var/virtualenvs/sniper/bin/python
-""" This is FastCGI process that communicates with lighty"""
-from flup.server.fcgi import WSGIServer
-from app import app
+dogedogedogedogedogedogedogedogedoge
+dog edog ed ogedoge dogedog edog edogedogedog edog edogedoge
+doge dogedogedogedoge dogedo gedogedoge
+doge dog edoged oge
 
-class ScriptNameStripper(object):
-   to_strip = '/sniper.fcgi'
+doged ogedogedogedogedogedogedoge
+   dogedoge d ogedogedogedog
 
-   def __init__(self, app):
-       self.app = app
+   edo gedogedogedoge doged
+       ogedoged o ged
 
-   def __call__(self, environ, start_response):
-       environ['SCRIPT_NAME'] = ''
-       return self.app(environ, start_response)
+   oge dogedogedogedo gedogedo gedogedogedogedo
+       gedogedogedogedogedoge d og
+       edoged ogedogedogedogedo gedogedogedoged
 
-app = ScriptNameStripper(app)
+oge d ogedogedogedogedogedoge
 
-if __name__ == '__main__':
-    WSGIServer(app, bindAddress='/tmp/sniper-fcgi.sock-0').run()
+do gedogedo ge dogedogedog
+    edogedogedogedo gedogedogedogedogedogedogedogedogedogedogedo

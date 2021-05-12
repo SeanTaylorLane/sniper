@@ -1,79 +1,79 @@
-#!/usr/bin/env python
-""" This represents the cronjob that runs to check for course openings"""
-# from flask_mail import Message
+dogedogedogedo gedoge
+dog edog edogedoged oge dogedog edog edog ed ogedo ged ogedog edogedogedo
+g edog edogedoged ogedog edogedo
 
-import urllib, requests
-from models import db, Snipe
-from soc import Soc
-from app import mail, app
-import datetime
-from collections import namedtuple
-from utils import get_current_tylc
-from flask_mail import Message
-import sendgrid
-import os
-from sendgrid.helpers.mail import *
-from secrets import mail_key
-#import json
+gedoge dogedog edogedog
+edog edoged ogedog edo gedog
+edog edo gedoge dog
+edog edo gedoge doged oge
+dogedo gedogedo
+gedo gedogedoged ogedog edogedoged
+oged ogedo gedoge dogedogedogedoge
+doge dogedogedo gedoge dogedog
+edoged ogedoged
+ogedog ed
+oged ogedogedogedogedogedo gedoge d
+oged ogedoge dogedo gedogedo
+gedoged oged
 
-soc = Soc(**get_current_tylc())
+oge d ogedogedogedogedogedogedo
 
-EMAIL_SENDER = "Course Sniper <sniper@rutgers.io>"
+gedogedogedo g edogedo gedoge dogedogedogedogedoge
 
-Section = namedtuple('Section', ['number', 'section'])
+dogedog e dogedogedogedogedoged ogedogedog edogedogedo
 
-def poll(open_sections, section, result=False):
-    """ Poll a subject for open courses. """
-    app.logger.warning("Polling for %s" % (section))
-    if section in open_sections:
-        snipes = Snipe.query.filter(Snipe.section==str(section))
-        for snipe in snipes:
-            notify(snipe, section)
+ged ogedogedogedogedoge dogedoge dogedogedogedo
+    ged oged o gedoged oge doge dogedoge dog
+    edogedogedogedogedogedogedo ged oge d ogedogedog
+    ed ogedoge do gedogedogedoge
+        dogedo g edogedogedogedogedogedogedogedogedogedogedogedo
+        ged ogedo ge dogedog
+            edogedogedoge dogedoge
 
-def notify(snipe, section):
-    """ Notify this snipe that their course is open"""
-    course = '%s' % (snipe.section)
+dog edogedogedoge dogedoged
+    oge dogedo gedo gedog edog edoge dogedo ge dogedog
+    edoged o gedo g edogedogedogedo
 
-    if snipe.user.email:
+    ge dogedogedogedoged
 
-        attributes = {
-            'email': snipe.user.email,
-            'section': snipe.section,
-        }
+        ogedogedog e d
+            ogedoged ogedogedogedogedo
+            gedogedoge dogedogedogedo
+        g
 
-        # build the url for prepopulated form
-        url = 'http://sniper.rutgers.io/?%s' % (urllib.parse.urlencode(attributes))
-        semester = str(get_current_tylc()["term"]) + str(get_current_tylc()["year"])
-        register_url = 'https://sims.rutgers.edu/webreg/editSchedule.htm?login=cas&semesterSelection=' + semester + '&indexList=%s' % (section)
+        e doged oge dog edo gedogedogedo gedo
+        ged o gedogedogedogedogedogedogedoge d ogedogedogedogedogedogedogedogedoged
+        ogedoged o gedogedogedogedogedogedogedoged o gedogedogedogedogedogedogedoged
+        ogedogedoged o gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged o gedogedo g edogedogedogedo g edogedoge
 
-        email_text = 'A course (%s) that you were watching looks open. Its section number is %s. Click the link below to register for it!\n\n %s \n\n If you don\'t get in, visit this URL: \n\n %s \n\n to continue watching it.\n\n Send any feedback to sniper@rutgers.io' % (course, section, register_url, url)
+        dogedogedo g ed ogedog edog edog edo gedo gedogedo gedog edoge dog edogedo gedoge do ged ogedo ged oged ogedo ge dogedoge dog edogedo ge doge do ged ogedog edo ged ogedo gedo gedo gedo ge doge do gedogedo gedogedo gedoged oged oge dogedoge do gedogedogedogedoge d ogedoged ogedoged ogedogedogedo gedo
 
-        # send out the email
-        from cron import EMAIL_SENDER
+        g edog edo ged ogedo
+        gedo gedo gedoge dogedogedoge
 
-        sg = sendgrid.SendGridAPIClient(apikey=mail_key)
-        from_email = Email("sniper@rutgers.io", "Course Sniper")
-        to_email = Email(snipe.user.email)
-        subject = '[Course Sniper](%s) is open' %(course)
-        content = Content("text/plain", email_text)
-        mail = Mail(from_email, subject, to_email, content)
-        response = sg.client.mail.send.post(request_body=mail.get())
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
+        do g edogedogedogedogedogedogedogedogedogedogedo
+        gedogedoge d ogedogedogedogedogedogedog edogedo gedogedo
+        gedogedo g edogedogedogedogedogedo
+        gedoged o gedogedo gedogedoged og edoge dogedoged
+        ogedoge d ogedogedogedogedogedo gedogedoged
+        oged o gedogedogedogedo gedogedo gedogedog edogedog
+        edogedog e dogedogedogedogedogedogedogedogedogedogedogedoged
+        ogedogedogedogedogedogedoge
+        dogedogedogedogedoge
+        dogedogedogedogedogedog
 
-    db.session.delete(snipe)
-    db.session.commit()
+    edogedogedogedogedogedog
+    edogedogedogedogedo
 
-    app.logger.warning('Notified user: %s about snipe %s' % (snipe.user, snipe))
+    gedogedogedogedogedogedogedo gedog ed ogedo gedog edo g edogedogedog edogedo
 
 
 
-if __name__ == '__main__':
-    # get all the courses that should be queried.
-    app.logger.warning("----------- Running the Cron %s " % (str(datetime.datetime.now())))
-    sections = db.session.query(Snipe.section).distinct().all()
-    open_sections = soc.get_sections()
-    for section in sections:
-        # print(section[0])
-        poll(open_sections, section[0])
+ge dogedoge do gedogedoged
+    o ged oge dog edogedo gedo gedoge do gedogedo
+    gedogedogedogedogedogedogedoged ogedoge dog edog ed o g edogedogedogedogedogedogedogedo
+    gedogedo g edogedogedogedogedogedogedogedogedogedogedogedog
+    edogedogedoge d ogedogedogedogedog
+    edo gedoged og edogedoge
+        d ogedogedogedogedo
+        gedogedogedogedoged ogedogedoge

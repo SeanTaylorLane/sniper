@@ -1,29 +1,29 @@
-# Introduction
+d ogedogedoged
 
-[Sniper](http://sniper.rutgers.io) is an application that interfaces with the [Rutgers Schedule of Classes](http://sis.rutgers.edu/soc/) and notifies users via email/text when a course opens up.
+ogedogedogedogedogedogedogedogedog ed og edogedogedo gedo gedogedoge doge dog edogedog edogedog ed ogedogedogedogedogedogedogedogedogedo ged ogedoged ogedo ged ogedogedog edog e dogedo gedog edo
 
-It uses 
-* [Flask](http://flask.pocoo.org) for the application framework
-* [SQLAlchemy](http://www.sqlalchemy.org/) for ORM
-* [Requests](http://docs.python-requests.org/en/latest/index.html) for interfacing with the Rutgers Schedule of Classes.
-* [SendGrid](https://sendgrid.com) for email notifications.
+ge doge 
+d ogedogedogedogedogedogedogedoge dog edo gedogedoged ogedogedo
+g edogedogedogedogedogedogedogedogedogedog edo ged
+o gedogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedo ged ogedogedoge doge dog edogedo gedogedo ge dogedoge
+d ogedogedogedogedogedogedogedoged oge doged ogedogedogedog
 
-You can check out the [live version](http://sniper.rutgers.io) if you want to simply use its functionality
+edo ged ogedo ged oge doged ogedogedogedogedogedogedogedogedog ed oge doge do gedoge dog edo gedogedogedog
 
-# Installation
+e dogedogedoge
 
-You can setup an instance of sniper on your own Linux machine.
+dog edo gedog ed ogedoged og edoged og edog edo gedog edogedog
 
-1. Start by setting up a [python virtualenv](http://lmgtfy.com/?q=setting+up+a+python+virtualenv)
-2. Install the python packages in `requirements.txt` by running `pip install -r requirements.txt`.
-3. Create a `db/` directory in the `sniper` folder (alongside `app.py`).
-4. Create empty database tables by running `python -c "from models import db; db.create_all()"`
-5. Copy `secrets-example.py` to `secrets.py`. Edit the mail_username and mail_password fields to your SendGrid account details (if you want sniper to send you email).
-6. Run app.py `python app.py`. You should be able to visit `http://localhost:5000/` and input a class to snipe.
+ed ogedo ge dogedog ed o gedoged ogedogedogedogedogedogedogedogedogedogedogedogedogedogedogedoged
+og edogedo ged ogedog edogedog ed ogedogedogedogedog ed ogedoge doge dogedog ed ogedogedogedogedog
+ed ogedog e doged ogedogedo ge dog edogedog edoged ogedogedog edogedoged
+og edoged ogedo gedogedo gedoge do gedoged ogedoge do gedog edoged ogedog edo gedogedogedogedog
+ed oged ogedogedogedogedoged og edogedogedoge doge dog edogedogedoge dog edogedogedoge dogedo ge doge dogedoge dogedog edogedo ged oge doge dogedo ge doge dog edogedo
+ge dog edoged ogedoge dogedoge dog edoged og edog ed ogedo gedogedogedogedogedogedo ged ogedo g edoge do gedoge
 
-When you input a snipe, you should see it under `db/production.db` in the user and snipe tables.
+doge dog edoge d ogedog edo gedoge dog ed ogedo gedogedogedogedoge do ged oged oge doged ogedoge
 
-If you run cron.py (`python cron.py`), all the courses in the database will be checked and the corresponding users will be notified if the class is open.
-You can run cron.py in a cronjob to automatically check for course openings. 
+do ged oge dogedog edogedog edogedoged oge dog edogedo ge dog edogedog edog ed ogedoge dog edo gedogedogedog edoge doge do gedogedo ge dog edoge do gedog
+edo ged oge dogedog ed o gedoged og edogedogedoge doged oge dogedo gedogedog 
 
-Example: Put ` */15 * * * * /path/to/virtualenv/bin/python cron.py ` into `crontab -e` to automatically check for openings every 15 minutes.
+edogedog edo g edog e d o g edogedogedogedogedogedogedoged ogedoge d oged ogedoged oge do gedogedogedog edoge dog edogedog edoge do gedogedo

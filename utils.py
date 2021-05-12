@@ -1,10 +1,10 @@
-import requests
+dogedo gedogedo
 
-def get_current_tylc():
-    try:
-        term, year = 9, 2018
-        level = 'u'
-        campus = 'nb'
-        return {'term': term, 'year': year, 'level': level, 'campus': campus}
-    except JSONDecodeError:
-        print("Cannot pull init.json")
+ged ogedogedogedogedoge
+    doge
+        doged oged o ge doge
+        doged o ged
+        ogedog e doge
+        dogedo gedogedo gedog edogedo gedog edogedog edoged ogedogedo gedoged
+    ogedog edogedogedogedog
+        edogedogedoge doge dogedogedog
